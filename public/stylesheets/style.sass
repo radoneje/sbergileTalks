@@ -1,6 +1,61 @@
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  padding: 78px 116px
+  font: 14px "SB Sans Text",  sans-serif
+.fig
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: -1
+.fig svg
+  height: 100%
 
-a
-  color: #00B7FF
+.header
+  /* SBERGILE TALKS 2020: */
+  font-weight: 600
+  font-size: 64px
+  color: #04D987
+  letter-spacing: 2.35px
+  line-height: 80px
+  margin-top: 50px
+.header2
+  color:#333F48
+.lid
+    /* Узнай секреты самой: */
+    font-family: SBSansDisplay-Semibold
+    font-size: 20px
+    color: #333F48
+    letter-spacing: 0.69px
+    margin-top: 50px
+.date
+    /* 8 и 9 декабря: */
+    font-family: SBSansDisplay-Semibold
+    font-size: 36px
+    color: #333F48
+    letter-spacing: 0.69px
+    line-height: 115px
+.formBtn
+  /* Rectangle: */
+  background: #FDC218
+  box-shadow: 0 0 60px -20px rgba(0,0,0,0.50)
+  border-radius: 51px
+  /* Стать участником: */
+  font-size: 20px
+  color: #333F48
+  letter-spacing: 0.57px
+  text-align: center
+  width: max-content
+  padding: 34px 74px
+  cursor: pointer
+.box
+  display: flex
+  flex-direction: column
+@media only screen and (max-width:1100px)
+  .fig
+    display: none
+
+
+  .formBtn
+    width: inherit
+    margin-top: 50px
+
