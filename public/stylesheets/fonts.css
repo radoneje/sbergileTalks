@@ -2,38 +2,37 @@
 
 
 @font-face {
-  font-family: SB Sans Text;
-  font-display: swap;
-  src: url(/fonts/SBSansText-Bold.eot);
-  src: url(/fonts/SBSansText-Bold.eot?#iefix) format("embedded-opentype"),
-  url(/fonts/SBSansText-Bold.woff2) format("woff2"),
-  url(/fonts/SBSansText-Bold.woff) format("woff"),
-  url(/fonts/SBSansText-Bold.ttf) format("truetype"),
-  url(/fonts/SBSansText-Bold.svg#svgFontName) format("svg");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: SB Sans Text;
-  font-display: swap;
-  src: url(/fonts/SBSansText-Medium.eot);
-  src: url(/fonts/SBSansText-Medium.eot?#iefix) format("embedded-opentype"),
-  url(/fonts/SBSansText-Medium.woff2) format("woff2"),
-  url(/fonts/SBSansText-Medium.woff) format("woff"),
-  url(/fonts/SBSansText-Medium.ttf) format("truetype"),
-  url(/fonts/SBSansText-Medium.svg#svgFontName) format("svg");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: SB Sans Text;
-  font-display: swap;
-  src: url(/fonts/SBSansText-Semibold.eot);
-  src: url(/fonts/SBSansText-Semibold.eot?#iefix) format("embedded-opentype"),
-  url(/fonts/SBSansText-Semibold.woff2) format("woff2"),
-  url(/fonts/SBSansText-Semibold.woff) format("woff"),
-  url(/fonts/SBSansText-Semibold.ttf) format("truetype"),
-  url(/fonts/SBSansText-Semibold.svg#svgFontName) format("svg");
-  font-style: normal;
+  font-family: 'SB Sans Display';
+  src: url('fonts/SBSansDisplay-Semibold.eot');
+  src: url('fonts/SBSansDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SBSansDisplay-Semibold.woff2') format('woff2'),
+  url('fonts/SBSansDisplay-Semibold.woff') format('woff'),
+  url('fonts/SBSansDisplay-Semibold.ttf') format('truetype');
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Text';
+  src: url('fonts/SBSansText-Regular.eot');
+  src: url('fonts/SBSansText-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SBSansText-Regular.woff2') format('woff2'),
+  url('fonts/SBSansText-Regular.woff') format('woff'),
+  url('fonts/SBSansText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Display';
+  src: url('fonts/SBSansDisplay-Light.eot');
+  src: url('fonts/SBSansDisplay-Light.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SBSansDisplay-Light.woff2') format('woff2'),
+  url('fonts/SBSansDisplay-Light.woff') format('woff'),
+  url('fonts/SBSansDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
