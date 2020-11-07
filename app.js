@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 var config = require('./config.json')
+var session = require('express-session');
+var  fileUpload=require('express-fileupload')
 
 var indexRouter = require('./routes/index');
 var api = require('./routes/api');
@@ -15,6 +17,22 @@ var knex = require('knex')({
   version: '7.2',
   connection:config.pgConnection
 });
+
+const pgSession = require('connect-pg-simple')(session);
+const pgStoreConfig = {conObject: config.pgConnection}
+app.use(session({
+  secret: 'dvdfvbfebvfgfeß',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 1 * 24 * 60 * 60 * 1000 }, // 1 days
+  store:new pgSession(pgStoreConfig),
+}));
+app.use(fileUpload({
+  limits: { fileSize: 100 * 1024 * 1024 },
+  useTempFiles : true,
+  tempFileDir : path.join(__dirname, 'public/files'),
+  safeFileNames: true
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

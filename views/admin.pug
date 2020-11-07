@@ -1,0 +1,37 @@
+extends layout
+block head
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+
+block content
+  div
+    h4 Зарегистрированные пользователи
+
+    .btn.btn-outline-primary(onclick="usersXLS()") Скачать в Excel
+
+    table.table
+      thead
+        tr
+          th(scope="col") ID
+          th(scope="col") Имя
+          th(scope="col") Фамилия
+          th(scope="col") Email
+          th(scope="col") Компания
+          th(scope="col") Дата регистрации
+      tbody
+        each user in users
+          tr
+            td #{user.id}
+            td #{user.i}
+            td #{user.f}
+            td #{user.e}
+            td #{user.c}
+            td #{user.dateReg}
+
+  script.
+    function usersXLS() {
+      var elem=document.createElement("iframe")
+      elem.src="/rest/api/usersXLS"
+      elem.style.display="none"
+      document.body.appendChild(elem);
+    }
