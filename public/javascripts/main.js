@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
                 i:localStorage.getItem("i"),
                 f:localStorage.getItem("f"),
                 e:localStorage.getItem("e"),
-                c:localStorage.getItem("c")
+                c:localStorage.getItem("c"),
+                position:localStorage.getItem("position")
             },
             isRegLoader:false,
             isRegCompl:false,
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
                 localStorage.setItem("f", this.user.f)
                 localStorage.setItem("e", this.user.e)
                 localStorage.setItem("c", this.user.c)
+                localStorage.setItem("position", this.user.position)
 
                 this.isRegLoader=true;
 

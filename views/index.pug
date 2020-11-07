@@ -67,6 +67,9 @@ block content
             input#regE.regItemInput(v-model="user.e" v-bind:class="{err:Eerr}" type="email" placeholder="Email" @change="Eerr=false")
           .regItem
             input#regC.regItemInput( v-model="user.c" v-bind:class="{err:Cerr}" type="text" placeholder="Компания" @change="Cerr=false")
+          .regItem
+            input#regPosition.regItemInput( v-model="user.position"  type="text" placeholder="Должность" )
+
         .formBtn.sendBtn( @click="sendReg()")
           span(v-if="!isRegLoader && !isRegCompl") Отправить заявку
           span(v-if="isRegLoader && !isRegCompl" style="height: 1em;")

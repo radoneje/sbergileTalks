@@ -17,6 +17,7 @@ block content
           th(scope="col") Фамилия
           th(scope="col") Email
           th(scope="col") Компания
+          th(scope="col") Должность
           th(scope="col") Дата регистрации
       tbody
         each user in users
@@ -26,6 +27,7 @@ block content
             td #{user.f}
             td #{user.e}
             td #{user.c}
+            td #{user.position}
             td #{user.dateReg}
 
   script.
