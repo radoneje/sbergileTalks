@@ -36,7 +36,7 @@ router.get('/usersXLS', async function(req, res, next) {
       vertical: 'top',
     },
   });
-  var qColumns=["id", "Имя","Фамилия", "email","компания", " дата регистрации"]
+  var qColumns=["id", "Имя","Фамилия", "email","компания", " дата регистрации", "должность"]
   var ws = wb.addWorksheet('гыукы',
   );
   for(var i=1; i<=qColumns.length;i++){
