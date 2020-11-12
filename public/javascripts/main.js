@@ -1,6 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
                                                           // Если должен быть найден один элемент
+    if(isIE()){
+        document.getElementById("iehide").style.display="none";
+    }
     var app=new Vue({
         el:"#app",
         data:{
@@ -79,4 +82,11 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
 function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+function isIE() {
+    const ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+    const msie = ua.indexOf('MSIE '); // IE 10 or older
+    const trident = ua.indexOf('Trident/'); //IE 11
+
+    return (msie > 0 || trident > 0);
 }
