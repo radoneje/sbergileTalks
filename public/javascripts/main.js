@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             isAgreement:false
         },
         methods:{
-            sendReg:async function () {
+            sendReg: function () {
+                var _this=this;
                 if(this.isRegLoader)
                     return;
                 if(this.isRegCompl)
@@ -47,18 +48,20 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
 
                 this.isRegLoader=true;
 
-                var r= await axios.post("/rest/api/user", this.user);
-                setTimeout(()=>{
-                    this.isRegLoader=false;
-                    this.isRegCompl=true;
-                },2000)
+                axios.post("/rest/api/user", this.user).then(function (r) {
+                    setTimeout(function(){
+                        _this.isRegLoader=false;
+                        _this.isRegCompl=true;
+                    },2000)
+                })
+
 
             }
         },
         watch:{
             isShowRegistration:function () {
                 if(this.isShowRegistration){
-                    setTimeout(()=>{
+                    setTimeout(function(){
                         document.getElementById("regI").focus()
                     },0)
                 }
@@ -66,9 +69,8 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             }
         },
         mounted:function(){
-
             var _this=this;
-            setTimeout(()=>{ this.init=1;},1000)
+            setTimeout(function(){ _this.init=1;},1000)
 
 
         }
