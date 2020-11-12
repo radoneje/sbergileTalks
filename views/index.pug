@@ -3,6 +3,9 @@ block head
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   script(src="/javascripts/main.js")
+    <!--[if IE]>
+    <style>.iehide{display:none}</style>
+    <![endif]-->
 block content
   #app(v-bind:style="{opacity:init}")
     .logo
@@ -55,7 +58,7 @@ block content
       .formBtn(v-if="!isShowRegistration" @click="isShowRegistration=true") Стать участником
       .regWr(v-if="isShowRegistration")
         .regTitle
-          .regTitleImg
+          .regTitleImg.iehide
             img(src="/images/mask.png")
           .regTitle Регистрация
         .regBody
