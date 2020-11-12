@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             },
             isRegLoader:false,
             isRegCompl:false,
-            isAgreement:false
+            isAgreement:false,
+            isAgreeApproved:false,
         },
         methods:{
             sendReg: function () {

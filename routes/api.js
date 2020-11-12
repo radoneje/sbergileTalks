@@ -4,6 +4,7 @@ const moment = require('moment')
 const { convertArrayToCSV } = require('convert-array-to-csv');
 var path = require('path')
 var fs = require('fs')
+var nodemailer = require('nodemailer');
 
 /* GET users listing. */
 router.get('/ping', function(req, res, next) {
@@ -13,6 +14,7 @@ router.get('/ping', function(req, res, next) {
 router.post('/user', async (req, res, next) =>{
   var r=await req.knex("t_users").insert(req.body,"*")
   res.json(r);
+  await sendEmail();
 });
 
 router.get('/usersXLS', async function(req, res, next) {
@@ -70,6 +72,31 @@ router.get('/usersXLS', async function(req, res, next) {
   });
 
 });
+async function sendEmail(email, text) {
+  var transporter = nodemailer.createTransport({
+    host: "mail.nic.ru",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: "info@sber.link", // generated ethereal user
+      pass: "Gbplfgbplf13" // generated ethereal password
+    }
+  });
+
+  var mailOptions = {
+    from: 'info@sber.link',
+    to: email,
+    subject: 'Confirmation',
+    text: text
+  };
+  try {
+    await transporter.sendMail(mailOptions)
+    console.log("email send", email)
+  }
+  catch (e) {
+    console.warn(e)
+  }
+}
 
 
 module.exports = router;

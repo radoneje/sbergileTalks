@@ -209,3 +209,22 @@ input:focus{
 .agreementHeader{
     margin-left: 20px;
 }
+.regItemText{
+    font-size: 1.5em;
+    padding-bottom: 7px;
+    border-bottom: 1px solid black;
+    transition: border-bottom-color .5s ease;
+    cursor: pointer;
+    padding-left: 2em;
+    position: relative;
+}
+.regItemText.active:before{
+    content: "";
+    width: 1em;
+    height: .5em;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
+}

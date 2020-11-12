@@ -69,8 +69,12 @@ block content
             input#regC.regItemInput( v-model="user.c" v-bind:class="{err:Cerr}" type="text" placeholder="Компания" @change="Cerr=false")
           .regItem
             input#regPosition.regItemInput( v-model="user.position"  type="text" placeholder="Должность" )
+          .regItem
+            .regItemText(v-bind:class="{active:isAgreeApproved}" v-on:click="isAgreeApproved=!isAgreeApproved") Cоглашаюсь  с&nbsp; условиями обработки информации
+          .agreement()
+            .agreementText() Отправляя поля формы, вы предоставляете право и даёте своё согласие на обработку, хранение использование, удаление (с использованием средств автоматизации или без использования таких средств) предоставленных вами персональных данных (электронной почты, ваших фамилии и имени) в адрес ПАО Сбербанк (ОГРН 1027700132195, ул. Вавилова, д. 19, г. Москва, 117997) в целях взаимодействия с вами для регистрации участия в данном мероприятии и рассылки информационных и новостных материалов. При достижении целей обработки персональные данные будут удалены.
 
-        .formBtn.sendBtn( @click="sendReg()")
+        .formBtn.sendBtn( @click="sendReg()" v-if="isAgreeApproved")
           span(v-if="!isRegLoader && !isRegCompl") Отправить заявку
           span(v-if="isRegLoader && !isRegCompl" style="height: 1em;")
             <div id="ballsWaveG">
@@ -84,7 +88,4 @@ block content
             <div id="ballsWaveG_8" class="ballsWaveG"></div>
             </div>
           span(v-if="isRegCompl" style="height: 1em;") Заявка отправлена!
-        .agreement(v-if="!isRegLoader && !isRegCompl")
-          .agreementHeader Отправляя форму, вы соглашаетесь с&nbsp;
-            span.agreementLink(@click="isAgreement=!isAgreement") условиями обработки информации
-          .agreementText(v-if="isAgreement") Отправляя поля формы, вы предоставляете право и даёте своё согласие на обработку, хранение использование, удаление (с использованием средств автоматизации или без использования таких средств) предоставленных вами персональных данных (электронной почты, ваших фамилии и имени) в адрес ПАО Сбербанк (ОГРН 1027700132195, ул. Вавилова, д. 19, г. Москва, 117997) в целях взаимодействия с вами для регистрации участия в данном мероприятии и рассылки информационных и новостных материалов. При достижении целей обработки персональные данные будут удалены.
+
