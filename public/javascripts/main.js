@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             var _this=this;
             setTimeout(function(){ _this.init=1;},1000)
 
-
         }
     })
 });
