@@ -87,7 +87,7 @@ async function sendEmail(email, text) {
     from: 'info@sbergile-talks.ru',
     to: email,
     subject: 'Confirmation',
-    text: text
+    html: text+"<b>"+text+"</b>"
   };
   try {
     await transporter.sendMail(mailOptions)
