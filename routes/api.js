@@ -84,7 +84,7 @@ async function sendEmail(email, text) {
   });
 
   var mailOptions = {
-    from: 'info@sber.link',
+    from: 'info@sbergile-talks.ru',
     to: email,
     subject: 'Confirmation',
     text: text
