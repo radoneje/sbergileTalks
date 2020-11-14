@@ -20,6 +20,7 @@ try {
   if (!google.data.success)
     return res.sendStatus("404")
 
+  console.log(reg.body.user);
   var r = await req.knex("t_users").insert(req.body.user, "*")
   res.json(r);
   var file = path.join(__dirname, '../public/letter.html')
@@ -27,6 +28,7 @@ try {
   await sendEmail(req.body.user.e, text);
   }
   catch (e) {
+  console.warn("error",e)
     return res.sendStatus("404")
   }
 });
