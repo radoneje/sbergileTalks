@@ -20,7 +20,7 @@ try {
   if (!google.data.success)
     return res.sendStatus("404")
 
-  console.log(req.body.user);
+  console.log(req.body);
   var r = await req.knex("t_users").insert(req.body.user, "*")
   res.json(r);
   var file = path.join(__dirname, '../public/letter.html')
