@@ -226,5 +226,14 @@ input:focus{
     border-left: 2px solid black;
     transform: rotate(-45deg);
     position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.regItemText:after{
+    content: "";
+    width: 1.5em;
+    height: calc(100% - 3px);
+    border: 2px solid black;
+    position: absolute;
     left: 0;
 }
