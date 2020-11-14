@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
                                                           // Если должен быть найден один элемент
     if(isIE()){
         document.getElementById("iehide").style.display="none";
-        //document.getElementById("fig").style.display="none";
+        document.getElementById("fig").style.display="none";
     }
     var app=new Vue({
         el:"#app",
