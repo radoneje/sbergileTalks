@@ -28,7 +28,7 @@ try {
     await sendEmail(req.body.user.e, text);
   }
   catch (e) {
-    console.log("error mail")
+    console.log("error mail",e)
   }
   res.json(r)
   }
