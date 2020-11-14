@@ -78,7 +78,7 @@ async function sendEmail(email, text) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "info@sber.link", // generated ethereal user
+      user: "info@sbergile-talks.ru", // generated ethereal user
       pass: "Gbplfgbplf13" // generated ethereal password
     }
   });
