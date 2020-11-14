@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             isAgreeApproved:false,
         },
         methods:{
+            changeAgr:function(){
+                if(!this.isRegCompl)
+                    this.isAgreeApproved=!this.isAgreeApproved
+            },
             sendReg: function () {
                 var _this=this;
                 if(this.isRegLoader)

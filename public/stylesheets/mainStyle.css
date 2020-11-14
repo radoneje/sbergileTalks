@@ -16,6 +16,9 @@ input:focus{
     border-bottom: 1px solid black;
     transition: border-bottom-color .5s ease;
 }
+.regItemInput[readonly], .regItemText[readonly]{
+    background: #edf1f7;
+}
 .regItemInput.err {
 
     border-bottom-color: red;
