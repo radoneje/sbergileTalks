@@ -15,15 +15,20 @@ router.get('/ping', function(req, res, next) {
 router.post('/user', async (req, res, next) =>{
 
 
+try {
+  var google = await axios.get("https://www.google.com/recaptcha/api/siteverify?secret=6Ldk8uIZAAAAAAQGcBwNuu66uC8wFhxAZ1AJ-U0b&response=" + req.body.token)
+  if (!google.data.success)
+    return res.sendStatus("404")
 
-  var google = await axios.get("https://www.google.com/recaptcha/api/siteverify?secret=6Ldk8uIZAAAAAAQGcBwNuu66uC8wFhxAZ1AJ-U0b&response="+req.body.token)
-  console.log(google.data);
-
-  var r=await req.knex("t_users").insert(req.body.user,"*")
+  var r = await req.knex("t_users").insert(req.body.user, "*")
   res.json(r);
-  var file=path.join(__dirname, '../public/letter.html')
-  var text=fs.readFileSync(file);
-  await sendEmail(req.body.user.e,text);
+  var file = path.join(__dirname, '../public/letter.html')
+  var text = fs.readFileSync(file);
+  await sendEmail(req.body.user.e, text);
+  }
+  catch (e) {
+    return res.sendStatus("404")
+  }
 });
 
 router.get('/usersXLS', async function(req, res, next) {
