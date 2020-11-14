@@ -12,11 +12,17 @@ router.get('/ping', function(req, res, next) {
 });
 
 router.post('/user', async (req, res, next) =>{
-  var r=await req.knex("t_users").insert(req.body,"*")
+
+
+
+  var google = await axios.get("https://www.google.com/recaptcha/api/siteverify?secret=6Ldk8uIZAAAAAAQGcBwNuu66uC8wFhxAZ1AJ-U0b&response="+req.body.token)
+  console.log(google.data);
+
+  var r=await req.knex("t_users").insert(req.body.user,"*")
   res.json(r);
   var file=path.join(__dirname, '../public/letter.html')
   var text=fs.readFileSync(file);
-  await sendEmail(req.body.e,text);
+  await sendEmail(req.body.user.e,text);
 });
 
 router.get('/usersXLS', async function(req, res, next) {
