@@ -14,7 +14,9 @@ router.get('/ping', function(req, res, next) {
 router.post('/user', async (req, res, next) =>{
   var r=await req.knex("t_users").insert(req.body,"*")
   res.json(r);
-  await sendEmail(req.body.e,"ПРивед медвед");
+  var file=path.join(__dirname, '../public/letter.html')
+  var text=fs.readFileSync(file);
+  await sendEmail(req.body.e,text);
 });
 
 router.get('/usersXLS', async function(req, res, next) {
