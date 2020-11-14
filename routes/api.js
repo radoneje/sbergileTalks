@@ -76,7 +76,14 @@ router.get('/usersXLS', async function(req, res, next) {
 });
 async function sendEmail(email, text) {
   var transporter = nodemailer.createTransport({
-    host: "mail.nic.ru",
+  /*  host: "mail.nic.ru",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: "info@sbergile-talks.ru", // generated ethereal user
+      pass: "Gbplfgbplf13" // generated ethereal password
+    }*/
+    host: "smtp.yandex.ru",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
