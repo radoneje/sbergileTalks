@@ -22,10 +22,15 @@ try {
 
   console.log(req.body);
   var r = await req.knex("t_users").insert(req.body.user, "*")
-  res.json(r);
   var file = path.join(__dirname, '../public/letter.html')
   var text = fs.readFileSync(file);
-  await sendEmail(req.body.user.e, text);
+  try {
+    await sendEmail(req.body.user.e, text);
+  }
+  catch (e) {
+    console.log("error mail")
+  }
+  res.json(r)
   }
   catch (e) {
   console.warn("error",e)
