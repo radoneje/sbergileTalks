@@ -242,3 +242,9 @@ input:focus{
     left: 0;
     top:0;
 }
+@media only screen and (max-width:768px){
+    .regItemText:after {
+        height: 1.5em;
+    }
+
+}
