@@ -114,7 +114,7 @@ async function sendEmail(email, text) {
   var mailOptions = {
     from: 'info@sbergile-talks.ru',
     to: email,
-    subject: 'Confirmation',
+    subject: 'Sbergile Talks сonfirmation',
     html: text
   };
   try {
