@@ -25,10 +25,10 @@ try {
   var file = path.join(__dirname, '../public/letter.html')
   var text = fs.readFileSync(file);
   try {
-    text="Мы получили Вашу заявку на участие в конференции Sbergile Talks! \r\n\r\n\
-    Детали по подключению Вы получите ближе к дате конференции.\r\n\r\n\
-    Если у Вас возникнут вопросы - пишите на sbergile@sberbank.ru \r\n\r\n\
-    До встречи 8-9 декабря на Sbergile Talks!";
+    text="Мы получили Вашу заявку на участие в конференции Sbergile Talks! \r\n\
+Детали по подключению Вы получите ближе к дате конференции.\r\n\r\n\
+Если у Вас возникнут вопросы - пишите на sbergile@sberbank.ru \r\n\r\n\
+До встречи 8-9 декабря на Sbergile Talks!";
 
     await sendEmail(req.body.user.e, text);
   }
