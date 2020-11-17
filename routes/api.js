@@ -25,6 +25,11 @@ try {
   var file = path.join(__dirname, '../public/letter.html')
   var text = fs.readFileSync(file);
   try {
+    text="Мы получили Вашу заявку на участие в конференции Sbergile Talks! \r\n\r\n\
+    Детали по подключению Вы получите ближе к дате конференции.\r\n\r\n\
+    Если у Вас возникнут вопросы - пишите на sbergile@sberbank.ru \r\n\r\n\
+    До встречи 8-9 декабря на Sbergile Talks!";
+
     await sendEmail(req.body.user.e, text);
   }
   catch (e) {
@@ -102,20 +107,20 @@ async function sendEmail(email, text) {
       user: "info@sbergile-talks.ru", // generated ethereal user
       pass: "Gbplfgbplf13" // generated ethereal password
     }*/
-    host: "smtp.yandex.ru",
+    host: "mail.nic.ru",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "info@sbergile-talks.ru", // generated ethereal user
-      pass: "Gbplfgbplf13" // generated ethereal password
+      user: "sbergile-talks@sber.link", // generated ethereal user
+      pass: "Dfczgegrby123" // generated ethereal password
     }
   });
 
   var mailOptions = {
-    from: 'info@sbergile-talks.ru',
+    from: 'sbergile-talks@sber.link',
     to: email,
     subject: 'Sbergile Talks сonfirmation',
-    html: text
+    text: text
   };
   try {
     await transporter.sendMail(mailOptions)
