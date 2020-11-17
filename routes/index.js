@@ -27,7 +27,7 @@ function checkAdmin(req, res, next){
 router.get('/admin', checkAdmin, async function(req, res, next) {
   var users=await req.knex.select("*").from("t_users");
   users.forEach(u=>{
-    u.dateReg=moment(u.dateReg).add(3, 'hours').format("DD.MM.yyyy hh:mm:ss")
+    u.dateReg=moment(u.dateReg).add(3, 'hours').format("DD.MM.yyyy HH:mm:ss")
   })
   res.render('admin', { title: '**', users:users });
 });
