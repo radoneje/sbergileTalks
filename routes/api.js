@@ -25,12 +25,13 @@ try {
   var file = path.join(__dirname, '../public/letter.html')
   var text = fs.readFileSync(file);
   try {
-    text="Мы получили Вашу заявку на участие в конференции Sbergile Talks! \r\n\
-Детали по подключению Вы получите ближе к дате конференции.\r\n\r\n\
-Если у Вас возникнут вопросы - пишите на sbergile@sberbank.ru \r\n\r\n\
+    var text="Здравствуйте! \r\n\
+Вы зарегистрировались на конференцию Sbergile Talks. Детали по подключению мы направим ближе к дате конференции.\r\n\r\n\
+Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n\
 До встречи 8-9 декабря на Sbergile Talks!";
+    var subj="Регистрация на конференцию Sbergile Talks"
 
-    await sendEmail(req.body.user.e, text);
+    await sendEmail(req.body.user.e, text, subj);
   }
   catch (e) {
     console.log("error mail",e)
@@ -98,7 +99,7 @@ router.get('/usersXLS', async function(req, res, next) {
   });
 
 });
-async function sendEmail(email, text) {
+async function sendEmail(email, text,subj) {
   var transporter = nodemailer.createTransport({
   /*  host: "mail.nic.ru",
     port: 465,
@@ -119,7 +120,7 @@ async function sendEmail(email, text) {
   var mailOptions = {
     from: 'sbergile-talks@sber.link',
     to: email,
-    subject: 'Sbergile Talks сonfirmation',
+    subject: subj |'Sbergile Talks сonfirmation',
     text: text
   };
   try {
