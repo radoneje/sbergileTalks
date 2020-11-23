@@ -25,7 +25,7 @@ try {
   var file = path.join(__dirname, '../public/letter.html')
   var text = fs.readFileSync(file);
   try {
-    var text="Здравствуйте! \r\n\
+    var text="Здравствуйте! \r\n\r\n\
 Вы зарегистрировались на конференцию Sbergile Talks. Детали по подключению мы направим ближе к дате конференции.\r\n\r\n\
 Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n\
 До встречи 8-9 декабря на Sbergile Talks!";
@@ -120,7 +120,7 @@ async function sendEmail(email, text,subj) {
   var mailOptions = {
     from: 'sbergile-talks@sber.link',
     to: email,
-    subject: subj |'Sbergile Talks сonfirmation',
+    subject: subj,
     text: text
   };
   try {
