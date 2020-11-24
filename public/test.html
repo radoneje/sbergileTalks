@@ -96,8 +96,8 @@
                                     <h2>Регистрация</h2>
 
                                     <div class="form-group">
-                                        <input type="text"  required />
-                                        <span class="label ">Имя</span>
+                                        <input type="text"  name="i" required />
+                                        <span class="label " >Имя</span>
                                     </div>
                                     <div class="form-group">
                                         <input name="f" type="text"  required/>
@@ -112,7 +112,7 @@
                                         <span  class="label ">Компания</span>
                                     </div>
                                     <div class="form-group">
-                                        <input  name="p"  type="text"  required/>
+                                        <input  name="position"  type="text"  required/>
                                         <span  class="label ">Должность</span>
                                     </div>
 
@@ -286,7 +286,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Игра “Собирашка”</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream3"  >
+                                                            <input type="radio" id="test1" name="radio-stream5"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -306,7 +306,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Transformation Conquest Game</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream3"  >
+                                                            <input type="radio" id="test1" name="radio-stream6"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -2051,19 +2051,29 @@
         $('.submit-form').on('click',function (){
             var $elems=$(".registration-form input")
             console.log($elems);
-            var ret=[];
+            var obj = new Object();
             $elems.each(function(i,e){
-
                 var val=$(e).attr("type")=='checkbox'? $(e).is(":checked"): $(e).val()
-
-
-                var obj = {};
                 obj[$(e).attr("name")] =val ;
-                ret.push(obj);
-
-
             })
-            console.log('Send form', ret);
+            $("#workshops-promo input").each(function(i,e){
+                console.log('elem', $(e).attr("name"));
+                var val= $(e).is(":checked");
+                obj[$(e).attr("name")] =val ;
+            });
+            console.log('Send form', obj);
+
+            $.ajax({
+                type: "POST",
+                url: "/rest/api/addUser/",
+                data: JSON.stringify(obj),
+                success: function() {
+                    console.log("reg success");
+                    $("#sendButton").html("Ваши данные отправлены");
+                    $("#workshops-promo input").each(function(i,e){$(e).prop("readonly", true)});
+                    $(".registration-form input").each(function(i,e){$(e).prop("readonly", true)});
+                }
+            });
             return false;
         });
     });
