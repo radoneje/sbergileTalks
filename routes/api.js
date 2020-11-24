@@ -16,9 +16,9 @@ router.post('/user', async (req, res, next) =>{
 
 
 try {
-  var google = await axios.get("https://www.google.com/recaptcha/api/siteverify?secret=6Ldk8uIZAAAAAAQGcBwNuu66uC8wFhxAZ1AJ-U0b&response=" + req.body.token)
+/*  var google = await axios.get("https://www.google.com/recaptcha/api/siteverify?secret=6Ldk8uIZAAAAAAQGcBwNuu66uC8wFhxAZ1AJ-U0b&response=" + req.body.token)
   if (!google.data.success)
-    return res.sendStatus("404")
+    return res.sendStatus("404")*/
 
   console.log(req.body);
   var r = await req.knex("t_users").insert(req.body.user, "*")

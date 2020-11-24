@@ -57,18 +57,20 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
 
                 this.isRegLoader=true;
 
-                grecaptcha.ready(function() {
+                axios.post("/rest/api/user",{user:_this.user, token:token}).then(function (r) {
+                    setTimeout(function(){
+                        _this.isRegLoader=false;
+                        _this.isRegCompl=true;
+                    },1000)
+                })
+
+               /* grecaptcha.ready(function() {
                     grecaptcha.execute('6Ldk8uIZAAAAAEsV4RKg0n4cFEnn7ZmMEShcWgjX', {action: 'submit'}).then(function(token) {
                         // Add your logic to submit to your backend server here.
 
-                       axios.post("/rest/api/user",{user:_this.user, token:token}).then(function (r) {
-                            setTimeout(function(){
-                                _this.isRegLoader=false;
-                                _this.isRegCompl=true;
-                            },2000)
-                        })
+
                     });
-                });
+                });*/
 
 
 
