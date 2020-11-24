@@ -2049,11 +2049,21 @@
 
         //////отправка формы
         $('.submit-form').on('click',function (){
-            var elems=$(".registration-form input")
-            elems.forEach(function(e){
-                console.log($(e).attr("name"), $(e).val())
+            var $elems=$(".registration-form input")
+            console.log($elems);
+            var ret=[];
+            $elems.each(function(i,e){
+
+                var val=$(e).attr("type")=='checkbox'? $(e).is(":checked"): $(e).val()
+
+
+                var obj = {};
+                obj[$(e).attr("name")] =val ;
+                ret.push(obj);
+
+
             })
-            console.log('Send form');
+            console.log('Send form', ret);
             return false;
         });
     });
