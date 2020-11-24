@@ -49,8 +49,8 @@
 
 @font-face {
   font-family: 'SBSansText';
-  src: url("/fonts/sbsanstext/SBSansText-Regular.eot");
-  src: url("/fonts/sbsanstext/SBSansText-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsanstext/SBSansText-Regular.svg#SBSansText-Regular") format("svg"), url("/fonts/sbsanstext/SBSansText-Regular.ttf") format("truetype"), url("/fonts/sbsanstext/SBSansText-Regular.woff") format("woff"), url("/fonts/sbsanstext/SBSansText-Regular.woff2") format("woff2");
+  src: url("/fonts/sbsanstext/SBSansText-Semibold.eot");
+  src: url("/fonts/sbsanstext/SBSansText-Semibold.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsanstext/SBSansText-Semibold.svg#SBSansText-Regular") format("svg"), url("/fonts/sbsanstext/SBSansText-Semibold.ttf") format("truetype"), url("/fonts/sbsanstext/SBSansText-Regular.woff") format("woff"), url("/fonts/sbsanstext/SBSansText-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
