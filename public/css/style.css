@@ -49,8 +49,8 @@
 
 @font-face {
   font-family: 'SBSansText';
-  src: url("/fonts/sbsanstext/SBSansText-Semibold.eot");
-  src: url("/fonts/sbsanstext/SBSansText-Semibold.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsanstext/SBSansText-Semibold.svg#SBSansText-Regular") format("svg"), url("/fonts/sbsanstext/SBSansText-Semibold.ttf") format("truetype"), url("/fonts/sbsanstext/SBSansText-Regular.woff") format("woff"), url("/fonts/sbsanstext/SBSansText-Regular.woff2") format("woff2");
+  src: url("/fonts/sbsanstext/SBSansText-Regular.eot");
+  src: url("/fonts/sbsanstext/SBSansText-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsanstext/SBSansText-Regular.svg#SBSansText-Regular") format("svg"), url("/fonts/sbsanstext/SBSansText-Regular.ttf") format("truetype"), url("/fonts/sbsanstext/SBSansText-Regular.woff") format("woff"), url("/fonts/sbsanstext/SBSansText-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -84,8 +84,8 @@
 
 @font-face {
   font-family: 'SBSansDisplay';
-  src: url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.eot");
-  src: url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.svg#SBSansDisplay-Semibold") format("svg"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.ttf") format("truetype"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.woff") format("woff"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold") format("woff2");
+  src: url("/fonts/sbsansdisplay/SBSansDisplay-Regular.eot");
+  src: url("/fonts/sbsansdisplay/SBSansDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.svg#SBSansDisplay-Regular") format("svg"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.ttf") format("truetype"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.woff") format("woff"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -5732,6 +5732,12 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 1200px) {
     #home {
       padding-top: 5.9375rem; } }
+  @media (min-width: 1200px) {
+    #home .container > .row {
+      margin-right: calc(1.98125rem + 8.775vw); } }
+  @media (min-width: 1200px) and (min-width: 1200px) {
+    #home .container > .row {
+      margin-right: 8.5625rem; } }
   #home h1 {
     font-family: "SBSansDisplay";
     text-transform: uppercase;
@@ -5766,25 +5772,29 @@ a.text-dark:hover, a.text-dark:focus {
     @media (min-width: 1200px) {
       #home .sub-header {
         margin-top: 3rem; } }
+    @media (max-width: 1199.98px) {
+      #home .sub-header {
+        margin-bottom: 96px; } }
   @media (min-width: 992px) {
-    #home .registration-form-container {
-      background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 48.84%);
-      box-shadow: 0px 4px 24px rgba(53, 63, 71, 0.08);
+    #home #form-column {
       border-radius: 16px; } }
+  #home #form-column {
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 48.84%);
+    box-shadow: 0px 4px 24px rgba(53, 63, 71, 0.08); }
   #home .registration-form {
     padding: calc(1.375rem + 1.5vw);
     padding-top: calc(1.54375rem + 3.525vw);
-    display: inline-block;
-    margin-right: calc(1.98125rem + 8.775vw); }
+    display: inline-block; }
     @media (min-width: 1200px) {
       #home .registration-form {
         padding: 2.5rem; } }
     @media (min-width: 1200px) {
       #home .registration-form {
         padding-top: 4.1875rem; } }
-    @media (min-width: 1200px) {
+    @media (max-width: 1199.98px) {
       #home .registration-form {
-        margin-right: 8.5625rem; } }
+        padding-left: 15px;
+        padding-right: 15px; } }
     #home .registration-form h2 {
       font-family: 'SBSansDisplay';
       font-weight: 600;
@@ -5795,9 +5805,16 @@ a.text-dark:hover, a.text-dark:focus {
     #home .registration-form input {
       margin-top: 1.1875rem; }
 
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .registration-form-container form {
+    padding: 20px; } }
+
 #workshops-promo {
   padding-top: 67px;
   padding-left: 40px; }
+  @media (max-width: 1199.98px) {
+    #workshops-promo {
+      padding-left: 15px; } }
   #workshops-promo h2 {
     font-family: 'SBSansDisplay';
     font-weight: 600;
@@ -5880,14 +5897,32 @@ a.text-dark:hover, a.text-dark:focus {
   .home-workshop-item.active .workshop-speaker-unit {
     background: #F2F4F9; }
 
-@media (min-width: 992px) {
-  .background-1 {
-    background: url("/img/bg/bg1.svg") right top no-repeat; } }
+.background-1 {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  @media (min-width: 1200px) {
+    .background-1 {
+      background: url("/img/bg/bg1.svg") right top no-repeat;
+      width: 428px;
+      height: 248px;
+      top: -120px;
+      right: -310px; } }
+  @media (max-width: 1199.98px) {
+    .background-1 {
+      background: url("/img/bg/bg1_mobile.svg") right top no-repeat;
+      top: -130px; } }
+
+@media (max-width: 1199.98px) {
+  .bg1-container {
+    width: 120px;
+    height: 240px; } }
 
 .menu-main-mobile-container {
   position: fixed;
   background-color: #ffffff;
-  z-index: 1030; }
+  z-index: 1030;
+  opacity: 0; }
   .menu-main-mobile-container .menu-main-mobile-content {
     padding-top: 0px;
     padding-bottom: 56px; }
@@ -6044,6 +6079,16 @@ a.text-dark:hover, a.text-dark:focus {
   50% {
     opacity: 1; } }
 
+@keyframes fadeOutAnim {
+  50% {
+    opacity: 1; }
+  0% {
+    opacity: 0; } }
+
+#navbarTogglerSber01.show {
+  animation: fadeInAnim 10ms linear;
+  opacity: 1; }
+
 footer {
   min-height: 160px;
   background: linear-gradient(270deg, #3E91D1 0.02%, #62DA88 64.41%); }
@@ -6051,6 +6096,13 @@ footer {
     flex-direction: row; }
     footer .footer-menu a {
       color: #ffffff; }
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.bg-light {
+  background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 48.84%); }
 
 .form-group {
   position: relative;
@@ -6163,82 +6215,112 @@ footer {
 .sber-radio {
   width: 20px; }
 
-#about {
+#about .about-container {
   background: rgba(238, 241, 248, 0.92);
   backdrop-filter: blur(40px);
   padding-top: calc(1.875rem + 7.5vw);
   padding-bottom: calc(1.875rem + 7.5vw); }
   @media (min-width: 1200px) {
-    #about {
+    #about .about-container {
       padding-top: 7.5rem; } }
   @media (min-width: 1200px) {
-    #about {
+    #about .about-container {
       padding-bottom: 7.5rem; } }
-  #about .btn-action-sm {
-    width: 253px; }
-  #about .title {
-    color: #93999F;
-    font-family: 'SBSansDisplay';
-    font-style: normal;
-    font-weight: 600;
-    font-size: calc(1.375rem + 1.5vw); }
-    @media (min-width: 1200px) {
-      #about .title {
-        font-size: 2.5rem; } }
-  #about .title2 {
-    font-family: 'SBSansDisplay';
-    color: #60D58E;
-    font-style: normal;
-    font-weight: 600;
-    font-size: calc(1.575rem + 3.9vw);
-    margin-bottom: calc(1.325rem + 0.9vw); }
-    @media (min-width: 1200px) {
-      #about .title2 {
-        font-size: 4.5rem; } }
-    @media (min-width: 1200px) {
-      #about .title2 {
-        margin-bottom: 2rem; } }
-  #about .title3 {
-    font-weight: 600;
-    font-size: calc(1.275rem + 0.3vw); }
-    @media (min-width: 1200px) {
-      #about .title3 {
-        font-size: 1.5rem; } }
-  #about .content {
-    max-width: 1327px; }
-  #about p {
-    font-family: 'SBSansText';
-    font-style: normal;
-    font-weight: 400;
-    font-size: calc(1.275rem + 0.3vw);
-    line-height: calc(1.375rem + 1.5vw); }
-    @media (min-width: 1200px) {
-      #about p {
-        font-size: 1.5rem; } }
-    @media (min-width: 1200px) {
-      #about p {
-        line-height: 2.5rem; } }
-    @media (max-width: 1199.98px) {
-      #about p {
-        font-size: 1rem;
-        line-height: calc(1.3rem + 0.6vw); } }
+  @media (min-width: 992px) {
+    #about .about-container {
+      margin-top: 74px; } }
+
+#about .btn-action-sm {
+  width: 253px; }
+
+#about .title {
+  color: #93999F;
+  font-family: 'SBSansDisplay';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1.375rem + 1.5vw); }
+  @media (min-width: 1200px) {
+    #about .title {
+      font-size: 2.5rem; } }
+
+#about .title2 {
+  font-family: 'SBSansDisplay';
+  color: #60D58E;
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1.575rem + 3.9vw);
+  margin-bottom: calc(1.325rem + 0.9vw); }
+  @media (min-width: 1200px) {
+    #about .title2 {
+      font-size: 4.5rem; } }
+  @media (min-width: 1200px) {
+    #about .title2 {
+      margin-bottom: 2rem; } }
+
+#about .title3 {
+  font-weight: 600;
+  font-size: calc(1.275rem + 0.3vw); }
+  @media (min-width: 1200px) {
+    #about .title3 {
+      font-size: 1.5rem; } }
+
+#about .content {
+  max-width: 1327px; }
+
+#about p {
+  font-family: 'SBSansText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: calc(1.375rem + 1.5vw); }
+  @media (min-width: 1200px) {
+    #about p {
+      font-size: 1.5rem; } }
+  @media (min-width: 1200px) {
+    #about p {
+      line-height: 2.5rem; } }
+  @media (max-width: 1199.98px) {
+    #about p {
+      font-size: 1rem;
+      line-height: calc(1.3rem + 0.6vw); } }
   @media (max-width: 1199.98px) and (min-width: 1200px) {
     #about p {
       line-height: 1.75rem; } }
-  #about .footer {
-    margin-top: calc(1.525rem + 3.3vw); }
+
+#about .footer {
+  margin-top: calc(1.525rem + 3.3vw); }
+  @media (min-width: 1200px) {
+    #about .footer {
+      margin-top: 4rem; } }
+  #about .footer .footer-content {
+    font-family: 'SBSansDisplay';
+    color: #93999F;
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc(1.275rem + 0.3vw); }
     @media (min-width: 1200px) {
-      #about .footer {
-        margin-top: 4rem; } }
-    #about .footer .footer-content {
-      font-family: 'SBSansDisplay';
-      color: #93999F;
-      font-style: normal;
-      font-weight: 600;
-      font-size: calc(1.275rem + 0.3vw); }
-      @media (min-width: 1200px) {
-        #about .footer .footer-content {
-          font-size: 1.5rem; } }
+      #about .footer .footer-content {
+        font-size: 1.5rem; } }
+
+.background-2 {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  @media (min-width: 992px) {
+    .background-2 {
+      background: url("/img/bg/bg2.svg") right top no-repeat;
+      width: 949px;
+      height: 949px;
+      top: -50%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      bottom: 0;
+      z-index: -1; } }
+  @media (max-width: 1199.98px) {
+    .background-2 {
+      background: url("/img/bg/bg2_mobile.svg") right top no-repeat;
+      top: -130px; } }
 
 #speakers {
   padding-top: calc(1.875rem + 7.5vw);
@@ -6263,12 +6345,19 @@ footer {
     background: #EEF1F8;
     border-radius: 32px;
     max-width: 233px;
-    margin: 20px 17px;
+    margin: 20px 10px;
+    float: left;
     display: block; }
+    @media (max-width: 991.98px) {
+      #speakers .speaker-item {
+        margin: 20px 17px; } }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      #speakers .speaker-item {
+        max-width: 223px; } }
     #speakers .speaker-item img {
       border-radius: 32px 32px 0 0;
       max-width: 233px;
-    }
+      width: 100%; }
     #speakers .speaker-item .content {
       padding: 21px 16px 16px 16px;
       font-family: 'SBSansText';
@@ -6288,13 +6377,28 @@ footer {
         @media (min-width: 1200px) {
           #speakers .speaker-item .content .title {
             line-height: 1.625rem; } }
-  #speakers .slick-slide > div {
-    margin-left: -17px;
-    margin-right: -17px; }
   #speakers #prev-slide img {
     transform: rotate(-180deg); }
   #speakers .slick-disabled {
     opacity: 0.5; }
+
+@media (max-width: 1199.98px) {
+  .speaker-slider .slick-list {
+    padding-left: 0px !important;
+    padding-right: 20px !important; } }
+
+@media (max-width: 1199.98px) {
+  .speaker-slider .slick-slide {
+    margin-right: 10px; } }
+
+@media (max-width: 767.98px) {
+  .speaker-slider .slick-slide {
+    max-width: 250px;
+    margin-right: 24px; } }
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .speaker-slider .slick-slide {
+    width: 800px !important; } }
 
 #timetable {
   background: rgba(238, 241, 248, 0.8);
