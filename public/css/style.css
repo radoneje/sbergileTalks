@@ -6267,7 +6267,9 @@ footer {
     display: block; }
     #speakers .speaker-item img {
       border-radius: 32px 32px 0 0;
-      max-width: 233px; }
+      max-width: 233px;
+      width:100%
+    }
     #speakers .speaker-item .content {
       padding: 21px 16px 16px 16px;
       font-family: 'SBSansText';
