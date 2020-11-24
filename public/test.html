@@ -197,7 +197,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Как продать команде необходимость декомпозиции... </div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream1"  >
+                                                            <input type="radio" id="test1" name="radio-stream2"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -231,7 +231,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Ос. Как сказать важное и не  поссорится</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream2"  >
+                                                            <input type="radio" id="test1" name="radio-stream3"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -257,7 +257,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Value Stream Wirkshop</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream2"  >
+                                                            <input type="radio" id="test1" name="radio-stream4"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -2049,6 +2049,10 @@
 
         //////отправка формы
         $('.submit-form').on('click',function (){
+            var elems=$(".registration-form input")
+            elems.forEach(function(e){
+                console.log($(e).attr("name"), $(e).val())
+            })
             console.log('Send form');
             return false;
         });
