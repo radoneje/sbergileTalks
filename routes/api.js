@@ -45,7 +45,7 @@ try {
     return res.sendStatus("404")*/
 
   console.log("dd",req.body,req.body );
-  var r = await req.knex("t_users").insert(req.body, "*")
+  var r = await req.knex("t_users").insert(req.body.user, "*")
   var file = path.join(__dirname, '../public/letter.html')
   var text = fs.readFileSync(file);
   try {
@@ -55,7 +55,7 @@ try {
 До встречи 8-9 декабря на Sbergile Talks!";
     var subj="Регистрация на конференцию Sbergile Talks"
 
-    await sendEmail(req.body.e, text, subj);
+    await sendEmail(req.body.user.e, text, subj);
   }
   catch (e) {
     console.log("error mail",e)
