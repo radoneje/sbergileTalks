@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
@@ -103,32 +100,32 @@
                                         <span class="label ">Имя</span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text"  required/>
+                                        <id="f" input type="text"  required/>
                                         <span  class="label ">Фамилия</span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email"  required/>
+                                        <input id="i" type="email"  required/>
                                         <span  class="label ">Email</span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text"  required/>
+                                        <input   id="c"type="text"  required/>
                                         <span  class="label ">Компания</span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text"  required/>
+                                        <input id="p" type="text"  required/>
                                         <span  class="label ">Должность</span>
                                     </div>
 
                                     <div class="row mt-lg-5">
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" name="happy" id="checkbox-reports" value="yes" class="sber-checkbox">
+                                                <input id="isD" type="checkbox" name="happy" id="checkbox-reports" value="yes" class="sber-checkbox">
                                                 <label for="checkbox-reports">Доклады</label>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" name="workshops" id="checkbox-workshops"  value="yes" class="sber-checkbox">
+                                                <input id="isW" type="checkbox" name="workshops" id="checkbox-workshops"  value="yes" class="sber-checkbox">
                                                 <label for="checkbox-workshops">Воркшопы</label>
                                             </div>
                                         </div>
@@ -136,11 +133,11 @@
                                     </div>
 
                                     <div class=" mt-lg-3 form-group d-none d-lg-block">
-                                        <a href="#" class="btn-action bg-color2 w-100 submit-form">Отправить</a>
+                                        <a href="#" class="btn-action bg-color2 w-100 submit-form" id="sendButton">Отправить</a>
                                     </div>
 
                                     <div class=" mt-lg-3 form-group d-none d-lg-block">
-                                        <input type="checkbox" name="private-data" id="private-data"  value="yes" class="sber-checkbox">
+                                        <input id="isPers" type="checkbox" name="private-data" id="private-data"  value="yes" class="sber-checkbox">
                                         <label for="private-data">Согласен на обработку персональных данных</label>
                                     </div>
 
@@ -174,7 +171,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Зачем вам визуализация?</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream1" checked >
+                                                            <input type="radio" id="isW1" name="radio-stream1" checked >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -200,7 +197,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Как продать команде необходимость декомпозиции... </div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream1"  >
+                                                            <input type="radio" id="isW2" name="radio-stream1"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -234,7 +231,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Ос. Как сказать важное и не  поссорится</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream2"  >
+                                                            <input type="radio" id="isW3" name="radio-stream2"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -260,7 +257,7 @@
                                                     <div class="col"> <div class="home-workshop-title">Value Stream Wirkshop</div>  </div>
                                                     <div class="col-auto">
                                                         <label class="sber-radio">
-                                                            <input type="radio" id="test1" name="radio-stream2"  >
+                                                            <input type="radio" id="isW4" name="radio-stream2"  >
                                                             <label for="test1">&nbsp;</label>
                                                         </label>
                                                     </div>
@@ -2052,7 +2049,8 @@
 
         //////отправка формы
         $('.submit-form').on('click',function (){
-            console.log('Send form');
+            console.log('Send form', $("#isW1").val());
+
             return false;
         });
     });
