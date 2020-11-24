@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
 
                 this.isRegLoader=true;
 
-                axios.post("/rest/api/user",{user:_this.user, token:token}).then(function (r) {
+                axios.post("/rest/api/user",{user:_this.user/*, token:token*/}).then(function (r) {
                     setTimeout(function(){
                         _this.isRegLoader=false;
                         _this.isRegCompl=true;
