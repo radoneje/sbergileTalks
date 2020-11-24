@@ -84,8 +84,8 @@
 
 @font-face {
   font-family: 'SBSansDisplay';
-  src: url("/fonts/sbsansdisplay/SBSansDisplay-Regular.eot");
-  src: url("/fonts/sbsansdisplay/SBSansDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.svg#SBSansDisplay-Regular") format("svg"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.ttf") format("truetype"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.woff") format("woff"), url("/fonts/sbsansdisplay/SBSansDisplay-Regular.woff2") format("woff2");
+  src: url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.eot");
+  src: url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.svg#SBSansDisplay-Semibold") format("svg"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.ttf") format("truetype"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold.woff") format("woff"), url("/fonts/sbsansdisplay/SBSansDisplay-Semibold") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
