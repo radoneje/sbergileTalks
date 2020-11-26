@@ -5709,7 +5709,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 10;
+  z-index: -1;
   display: block;
   background-size: contain; }
   @media (min-width: 1200px) {
