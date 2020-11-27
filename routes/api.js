@@ -33,7 +33,7 @@ router.post('/addUser', async (req, res, next) => {
     } catch (e) {
       console.log("error mail", e)
     }
-    res.json(r)
+    return res.json(r)
   }
   res.json(1)
 });
