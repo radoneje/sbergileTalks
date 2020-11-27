@@ -30,10 +30,10 @@ router.post('/addUser', async (req, res, next) => {
       var subj = "Регистрация на конференцию Sbergile Talks"
 
       var content="";
-      if(user.workshops)
+     // if(user.workshops)
         content= fs.readFileSync(path.join(__dirname, '../public/event.ics'))
-      else
-        content= fs.readFileSync(path.join(__dirname, '../public/eventSmall.ics'))
+      //else
+       // content= fs.readFileSync(path.join(__dirname, '../public/eventSmall.ics'))
       var calendar={
         filename: 'invitation.ics',
         method: 'request',
