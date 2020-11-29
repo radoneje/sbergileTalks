@@ -1,8 +1,8 @@
 [
-  {"id":"radio-stream1", "title":"Зачем вам визуализация?", "url": "", "descr":"09 декабря 10:00 - 12:00"},
-  {"id":"radio-stream2", "title":"Как продать команде необходимость..", "url": "", "descr":"09 декабря 10:00 - 12:00"},
-  {"id":"radio-stream3", "title":"ОС. Как сказать важное и не поссориться", "url": "", "descr":"09 декабря 12:30 - 14:30"},
-  {"id":"radio-stream4", "title":"Value Stream Workshop", "url": "", "descr":"09 декабря 12:30 - 14:30"},
-  {"id":"radio-stream5", "title":"Игра “Собирашка”", "url": "", "descr":"09 декабря 15:00 - 17:00"},
-  {"id":"radio-stream6", "title":"Transformation Conquest Game", "url": "", "descr":"09 декабря 15:00 - 17:00"}
+  {"id":"radio-stream1", "title":"Зачем вам визуализация?", "url": "https://us02web.zoom.us/j/81080586849?pwd=OXZYTDNVbkFsRnltRHVua1g5TWVUdz09", "descr":"09 декабря 10:00 - 12:00"},
+  {"id":"radio-stream2", "title":"Как продать команде необходимость..", "url": "https://us02web.zoom.us/j/82765703816?pwd=UkZWMDg3cFA0OHltQjh0Q1hwVmxkUT09", "descr":"09 декабря 10:00 - 12:00"},
+  {"id":"radio-stream3", "title":"ОС. Как сказать важное и не поссориться", "url": "https://us02web.zoom.us/j/82471320972?pwd=ellFSnhEdjRKNTFZcXI3ZjRqR010dz09", "descr":"09 декабря 12:30 - 14:30"},
+  {"id":"radio-stream4", "title":"Value Stream Workshop", "url": "https://us02web.zoom.us/j/85096017275?pwd=SlVPbncwZGZvOHU0TWQrZ0NWUENCUT09", "descr":"09 декабря 12:30 - 14:30"},
+  {"id":"radio-stream5", "title":"Игра “Собирашка”", "url": "https://us02web.zoom.us/j/85059267165?pwd=Y1c1NVE2NVZ6dVVwVnhQbTQrb0RhQT09", "descr":"09 декабря 15:00 - 17:00"},
+  {"id":"radio-stream6", "title":"Transformation Conquest Game", "url": "https://us02web.zoom.us/j/86802440722?pwd=Sld0bXFRQWpLNXduSFUySGFNaGxxUT09", "descr":"09 декабря 15:00 - 17:00"}
 ]
