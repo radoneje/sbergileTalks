@@ -29,16 +29,13 @@ router.post('/addUser', async (req, res, next) => {
 Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n";
 
       workshops.forEach(ws=>{
-
         if(user[ws.id]){
-          text+="Воркшоп \""+ws.title+"\" начнется " + ws.descr + " по ссылке: "+ ws.url +"\r\n\r\n"
+          text+="Воркшоп \""+ws.title+"\" будет проходить " + ws.descr + ",  доступ по ссылке: "+ ws.url +"\r\n\r\n"
         }
       })
-
       text+="До встречи 8-9 декабря на Sbergile Talks!";
       var subj = "Регистрация на конференцию Sbergile Talks"
 
-      console.log(text);
       var content="";
      // if(user.workshops)
         content= fs.readFileSync(path.join(__dirname, '../public/event.ics'))
