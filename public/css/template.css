@@ -7,6 +7,15 @@
 *::before,
 *::after {
   box-sizing: border-box; }
+#timetable .table-item.content {
+  background: #FFFFFF;
+  border-radius: 32px;
+  padding: 1.25rem;
+  margin-right: 10px;
+}
+#timetable .table-item.break
+
+
 
 html {
   font-family: sans-serif;
@@ -6921,10 +6930,7 @@ footer {
   @media (max-width: 991.98px) and (min-width: 1200px) {
     #timetable .table-item .time {
       line-height: 1.75rem; } }
-  #timetable .table-item.content {
-    background: #FFFFFF;
-    border-radius: 32px;
-    padding: 1.25rem; }
+
     #timetable .table-item.content .table-item-title {
       font-family: 'SBSansDisplay';
       font-style: normal;
@@ -6996,7 +7002,9 @@ footer {
     font-style: normal;
     font-weight: 600;
     font-size: calc(1.2625rem + 0.15vw);
-    line-height: calc(1.3rem + 0.6vw); }
+    line-height: calc(1.3rem + 0.6vw);
+  margin-right: 10px !important;
+  }
     @media (min-width: 1200px) {
       #timetable .table-item.break {
         font-size: 1.375rem; } }

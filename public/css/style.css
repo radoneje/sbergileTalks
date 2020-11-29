@@ -6534,7 +6534,12 @@ footer {
   #timetable .table-item.content {
     background: #FFFFFF;
     border-radius: 32px;
-    padding: calc(1.275rem + 0.3vw); }
+    padding: calc(1.275rem + 0.3vw);
+    margin-right: 10px;
+  }
+#timetable .table-item.break{
+  margin-right: 10px;
+}
     @media (min-width: 1200px) {
       #timetable .table-item.content {
         padding: 1.5rem; } }
