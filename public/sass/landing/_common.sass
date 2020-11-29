@@ -1,0 +1,169 @@
+h1, h2, h3, h4, h5, h6
+  margin-top: 0
+  margin-bottom: 0
+
+*
+  outline: 0 !important
+  outline: none !important
+body,html
+  width: 100%
+  height: 100%
+
+.bg-color6
+  background-color: #{$theme-color6}
+
+.bg-color2
+  background-color: #{$theme-color2}
+
+
+.btn-action
+  font-family: "SBSansDisplay"
+  box-shadow: 0px 4px 24px rgba(246, 195, 67, 0.4)
+  border-radius: 100px
+  line-height: normal
+  padding: 14px 14px
+  @include rfs(20px,'font-size')
+  @include rfs(26px,'line-height')
+  display: inline-block
+  font-weight: 600
+  text-align: center
+  color: #{$text-color1}
+.btn-action:hover
+  color: #{$text-color1}
+
+
+.btn-action2
+  font-family: "SBSansDisplay"
+  line-height: normal
+  padding: 11px 24px
+  @include rfs(20px,'font-size')
+  display: inline-block
+  font-weight: 600
+  text-align: center
+  border-radius: 999px
+  color: #{$text-color1}
+
+.btn-action.disabled
+  opacity: 0.5 !important
+
+.bg-color1
+  background: #{$primary}
+.bg-color2
+  background: #{$theme-color2}
+button
+  background-color: transparent
+
+.fadeIn
+  -webkit-animation-name: fadeIn
+  animation-name: fadeIn
+
+@-webkit-keyframes fadeIn
+  0%
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  to
+    opacity: 1
+
+
+
+
+.modal-header
+  @include margin-top(80px)
+.close
+  opacity: 1
+
+
+.sber-avatar
+  width: 200px
+  border-radius: 200px
+.modal-title
+  font-family: 'SBSansDisplay'
+  font-style: normal
+  font-weight: 600
+  @include font-size(40px)
+  @include rfs(56px,'line-height')
+
+.modal-title2
+  font-family: 'SBSansDisplay'
+  font-style: normal
+  font-weight: normal
+  @include font-size(32px)
+  @include rfs(40px,'line-height')
+.modal-speaker-type
+  font-style: normal
+  font-weight: normal
+  @include font-size(24px)
+  @include rfs(40px,'line-height')
+  @include margin-top(32px)
+.modal-speaker-theme
+  font-style: normal
+  font-weight: bold
+  @include font-size(24px)
+  @include margin-top(16px)
+  @include rfs(40px,'line-height')
+
+.modal-speaker-about
+  font-style: normal
+  font-weight: normal
+  @include font-size(24px)
+  @include margin-top(48px)
+  @include rfs(40px,'line-height')
+
+
+.btn-action-sm
+  color: #ffffff
+  font-family: "SBSansDisplay"
+  @include font-size(20px)
+  line-height: 26px
+  padding: 11px 24px
+  border-radius: 999px
+.btn-action-sm:hover
+  color: #ffffff
+
+
+footer
+  padding-top: 80px
+  padding-bottom: 80px
+  background: linear-gradient(270deg, #3E91D1 0.02%, #62DA88 64.41%)
+  .footer-menu
+    flex-direction: row
+    a
+      color: #ffffff
+  .btn-action-sm
+    width: 247px
+
+#speakerModal
+ .modal-header
+   background-color: #ffffff
+
+
+#resultModal,#messageModal
+  .modal-content
+    border-radius: 16px
+  .modal-header
+    margin-top: 0
+  .modal-title
+    @include media-breakpoint-up('lg')
+      font-weight: 600
+      font-size: 24px
+      line-height: 31px
+    @include media-breakpoint-down('lg')
+      font-size: 20px
+      line-height: 26px
+  .modal-body
+    font-family: 'SBSansText'
+    font-style: normal
+    font-weight: normal
+    @include media-breakpoint-up('lg')
+      font-size: 20px
+      line-height: 32px
+    @include media-breakpoint-down('lg')
+      font-size: 18px
+      line-height: 28px

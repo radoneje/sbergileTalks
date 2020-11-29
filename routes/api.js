@@ -6,6 +6,7 @@ var path = require('path')
 var fs = require('fs')
 var axios = require('axios')
 var nodemailer = require('nodemailer');
+var workshops=require('./../workshops')
 
 /* GET users listing. */
 router.get('/ping', function(req, res, next) {
@@ -25,10 +26,19 @@ router.post('/addUser', async (req, res, next) => {
     try {
       var text = "Здравствуйте! \r\n\r\n\
 Вы зарегистрировались на конференцию Sbergile Talks. Детали по подключению мы направим ближе к дате конференции.\r\n\r\n\
-Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n\
-До встречи 8-9 декабря на Sbergile Talks!";
+Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n";
+
+      workshops.forEach(ws=>{
+
+        if(user[ws.id]){
+          text+="Воркшоп \""+ws.title+"\" начнется " + ws.descr + " по ссылке: "+ ws.url +"\r\n\r\n"
+        }
+      })
+
+      text+="До встречи 8-9 декабря на Sbergile Talks!";
       var subj = "Регистрация на конференцию Sbergile Talks"
 
+      console.log(text);
       var content="";
      // if(user.workshops)
         content= fs.readFileSync(path.join(__dirname, '../public/event.ics'))

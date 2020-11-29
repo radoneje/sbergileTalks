@@ -1,0 +1,51 @@
+#speakers
+  @include padding-top(120px)
+  @include padding-bottom(120px)
+  a
+    color: inherit
+  .title
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include font-size(48px)
+  #speakers-next
+    margin-bottom: 19px
+  .speaker-item
+    background: #EEF1F8
+    border: 1px solid #EEF1F8
+    border-radius: 32px
+    max-width: 233px
+    margin: 20px 10px
+    @include media-breakpoint-down('md')
+      margin: 20px 17px
+    @include media-breakpoint-between('md','lg')
+      max-width: 223px
+    display: block
+    img
+      border-radius: 32px 32px 0 0
+      max-width: 233px
+      width: 100%
+    .content
+      padding: 21px 16px 16px 16px
+      font-family: 'SBSansText'
+      font-style: normal
+      font-weight: normal
+      @include font-size(16px)
+      @include rfs(24px,'line-height')
+      .title
+        font-family: 'SBSansDisplay'
+        font-style: normal
+        font-weight: 600
+        @include font-size(18px)
+        @include rfs(26px,'line-height')
+
+
+#speakers-prev
+    transform: rotate(-180deg)
+#speakers-prev.disabled,#speakers-next.disabled
+    opacity: 0.5
+#slider-navs
+  button
+    border: none
+
+

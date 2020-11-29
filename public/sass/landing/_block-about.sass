@@ -1,0 +1,59 @@
+#about
+  position: relative
+  overflow-x: hidden
+  .bg-container
+    background: rgba(238, 241, 248, 0.3)
+    backdrop-filter: blur(40px)
+  .container
+    @include rfs(120px,'padding-top')
+    @include rfs(120px,'padding-bottom')
+
+  .title
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(40px,'font-size')
+    @include rfs(51px,'line-height')
+    color: #{$text-color3}
+    @include media-breakpoint-down('lg')
+      @include rfs(32px,'font-size')
+      @include rfs(41px,'line-height')
+
+  .title2
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(72px,'font-size')
+    @include rfs(124px,'line-height')
+    @include rfs(36px,'margin-bottom')
+    @include media-breakpoint-down('lg')
+      @include rfs(48px,'font-size')
+      @include rfs(62px,'line-height')
+
+  .description
+    font-style: normal
+    font-weight: 400
+    @include rfs(24px,'font-size')
+    @include rfs(40px,'line-height')
+    @include media-breakpoint-down('lg')
+      @include rfs(16px,'font-size')
+      @include rfs(28px,'line-height')
+    >p
+      @include rfs(38px,'margin-bottom')
+  .footer
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(24px,'font-size')
+    @include rfs(40px,'line-height')
+    @include rfs(26px,'margin-top')
+    @include media-breakpoint-down('lg')
+      @include rfs(16px,'font-size')
+      @include rfs(28px,'line-height')
+    color: #{$text-color3}
+
+    .btn-action2
+      width: 253px
+    @include media-breakpoint-down('lg')
+      width: 219px
+

@@ -1,0 +1,159 @@
+.scroll-wrapper
+  overflow: hidden !important
+  padding: 0 !important
+  position: relative
+
+  > .scroll-content
+    border: none !important
+    box-sizing: content-box !important
+    height: auto
+    left: 0
+    margin: 0
+    max-height: none
+    max-width: none !important
+    overflow: scroll !important
+    padding: 0
+    position: relative !important
+    top: 0
+    width: auto !important
+
+    &::-webkit-scrollbar
+      height: 0
+      width: 0
+
+.scroll-element
+  display: none
+  box-sizing: content-box
+
+  div
+    box-sizing: content-box
+
+  &.scroll-x.scroll-scrollx_visible, &.scroll-y.scroll-scrolly_visible
+    display: block
+
+  .scroll-bar, .scroll-arrow
+    cursor: default
+
+.scroll-textarea
+  border: 1px solid #cccccc
+  border-top-color: #999999
+
+  > .scroll-content
+    overflow: hidden !important
+
+    > textarea
+      border: none !important
+      box-sizing: border-box
+      height: 100% !important
+      margin: 0
+      max-height: none !important
+      max-width: none !important
+      overflow: scroll !important
+      outline: none
+      padding: 2px
+      position: relative !important
+      top: 0
+      width: 100% !important
+
+      &::-webkit-scrollbar
+        height: 0
+        width: 0
+
+/*************** SIMPLE OUTER SCROLLBAR **************
+
+.scrollbar-outer >
+.scroll-element
+  border: none
+  margin: 0
+  padding: 0
+  position: absolute
+  z-index: 10
+
+  div
+    border: none
+    margin: 0
+    padding: 0
+    position: absolute
+    z-index: 10
+    display: block
+    height: 100%
+    left: 0
+    top: 0
+    width: 100%
+
+  background-color: #ffffff
+
+  &.scroll-x
+    bottom: 0
+    height: 12px
+    left: 0
+    width: 100%
+
+  &.scroll-y
+    height: 100%
+    right: 0
+    top: 0
+    width: 12px
+
+  &.scroll-x .scroll-element_outer
+    height: 8px
+    top: 2px
+
+  &.scroll-y .scroll-element_outer
+    left: 2px
+    width: 8px
+
+  .scroll-element_outer
+    overflow: hidden
+
+  .scroll-element_track
+    background-color: #eeeeee
+
+  .scroll-element_outer, .scroll-element_track
+    -webkit-border-radius: 8px
+    -moz-border-radius: 8px
+    border-radius: 8px
+
+  .scroll-bar
+    -webkit-border-radius: 8px
+    -moz-border-radius: 8px
+    border-radius: 8px
+    background-color: #d9d9d9
+
+    &:hover
+      background-color: #c2c2c2
+
+  &.scroll-draggable .scroll-bar
+    background-color: #919191
+
+  .scroll-content
+    &.scroll-scrolly_visible
+      left: -12px
+      margin-left: 12px
+
+    &.scroll-scrollx_visible
+      top: -12px
+      margin-top: 12px
+
+  .scroll-element
+    &.scroll-x .scroll-bar
+      min-width: 10px
+
+    &.scroll-y .scroll-bar
+      min-height: 10px
+
+    &.scroll-x.scroll-scrolly_visible .scroll-element_track
+      left: -14px
+
+    &.scroll-y.scroll-scrollx_visible .scroll-element_track
+      top: -14px
+
+    &.scroll-x.scroll-scrolly_visible .scroll-element_size
+      left: -14px
+
+    &.scroll-y.scroll-scrollx_visible .scroll-element_size
+      top: -14px
+
+/* scrollbar height/width & offset from container borders
+
+/* update scrollbar offset if both scrolls are visible

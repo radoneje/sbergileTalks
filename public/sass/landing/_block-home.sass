@@ -1,0 +1,96 @@
+@import registration-form
+#home
+  @include rfs(95px,'margin-top')
+  @include rfs(63px,'margin-bottom')
+  h1
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(88px,'font-size')
+    @include rfs(113px,'line-height')
+    text-transform: uppercase
+  .info-area
+    @include rfs(65px,'padding-top')
+    font-family: 'SBSansText'
+    font-style: normal
+    font-weight: normal
+    @include rfs(24px,'font-size')
+    @include rfs(40px,'line-height')
+    color: #{$text-color1}
+    .description
+      @include rfs(16px,'margin-top')
+    .brand-title2
+      font-family: 'SBSansDisplay'
+      font-style: normal
+      font-weight: 600
+      @include rfs(48px,'font-size')
+      @include rfs(62px,'line-height')
+      @include rfs(48px,'margin-top')
+      color: #{$primary}
+  .right-padding
+    @include rfs(137px,'width')
+
+#workshop-form
+  overflow-y: scroll
+  @include media-breakpoint-down('md')
+    overflow-y: unset
+  .workshop-form-title
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(41px,'line-height')
+    @include rfs(32px,'font-size')
+    @include media-breakpoint-between('md','lg')
+      @include rfs(28px,'line-height')
+      @include rfs(22px,'font-size')
+
+    @include media-breakpoint-down('md')
+      @include rfs(31px,'line-height')
+      @include rfs(18px,'font-size')
+
+  .workshop-time
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(21px,'line-height')
+    @include rfs(16px,'font-size')
+    color: #{$text-color2}
+    @include rfs(23px,'margin-top')
+
+    hr
+      border: none
+      border-bottom: 1px solid #{$theme-color3}
+
+
+  .workshop-item
+    @include rfs(12px,'margin-top')
+    .workshop-item-content
+      @include rfs(16px,'padding-top')
+      @include rfs(16px,'padding-bottom')
+      @include rfs(20px,'padding-left')
+      @include rfs(20px,'padding-right')
+      border: 1px solid #{$theme-color3}
+      border-radius: 16px
+      color: #{$text-color2}
+      cursor: pointer
+      .workshop-speaker-unit
+        @include rfs(8px,'padding')
+        border-radius: 16px
+  .workshop-item.selected
+    .workshop-item-content
+      border: 1px solid #{$theme-color6}
+      color: #{$text-color1}
+      .workshop-speaker-unit
+        background: rgba(238, 241, 248, 0.8)
+
+
+
+.submit-container
+  @include rfs(40px,'right')
+  @include media-breakpoint-between('lg','xxxl')
+    position: absolute
+    bottom: 0
+    //@include rfs(84px,'bottom')
+
+    @include media-breakpoint-down('lg')
+      right: 15px

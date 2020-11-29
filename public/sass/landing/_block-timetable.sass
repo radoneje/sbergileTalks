@@ -1,0 +1,200 @@
+#timetable
+  position: relative
+  .bg-container
+    background: rgba(238, 241, 248, 0.92)
+    backdrop-filter: blur(40px)
+
+    padding-top: 120px
+    padding-bottom: 120px
+
+  .title
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(48px,'font-size')
+    @include rfs(62px,'line-height')
+    @include rfs(92px,'margin-bottom')
+    @include media-breakpoint-down('lg')
+      //@include rfs(48px,'font-size')
+      //@include rfs(62px,'line-height')
+  .tabs-menu
+    background-color: #{$theme-color7}
+    padding: 6px 4px
+    border-radius: 12px
+    width: 544px
+    a
+      padding: 12px 81px
+      border-radius: 12px
+      color: #{$text-color5}
+      @include media-breakpoint-down('lg')
+      padding: 12px 5px
+    a.active
+      background-color: #ffffff
+      .sub-title
+        font-family: 'SBSansDisplay'
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 23px
+        color: #{$text-color4}
+
+  .tab-title
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(40px,'font-size')
+    @include rfs(51px,'line-height')
+
+  .tab-title2
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include rfs(32px,'font-size')
+    @include rfs(41px,'line-height')
+    color: #{$text-color6}
+
+
+  .separator
+    background: linear-gradient(90deg,#62DA86, #FBE34D)
+    height: 5px
+    margin-top: 16px
+    margin-bottom: 40px
+
+  .row-odd
+    background-color: rgba(217, 224, 240, .4)
+    border-radius: 32px
+    padding-top: 12px
+    padding-bottom: 12px
+    //height: 304px
+  .row-even
+    padding-top: 12px
+    padding-bottom: 12px
+    //height: 304px
+
+  .table-item
+    min-height: 280px
+    //margin-top: 12px
+    //margin-bottom: 12px
+    //padding: 20px
+    .time
+      font-family: 'SBSansDisplay'
+      font-style: normal
+      font-weight: 600
+      @include rfs(48px,'font-size')
+      @include rfs(62px,'line-height')
+      margin-left: 32px
+      @include media-breakpoint-down('md')
+        margin-left: 0
+        @include rfs(22px,'font-size')
+        @include rfs(28px,'line-height')
+        text-align: center
+
+
+
+  .table-item.content
+    background: #FFFFFF
+    border-radius: 32px
+    @include padding(20px)
+    .table-item-title
+      font-family: 'SBSansDisplay'
+      font-style: normal
+      font-weight: 600
+      @include font-size(22px)
+      @include rfs(28px,'line-height')
+      @include media-breakpoint-down('lg')
+        @include font-size(16px)
+        @include rfs(20px,'line-height')
+    .speaker-unit
+      background: rgba(238, 241, 248, 0.8)
+      backdrop-filter: blur(40px)
+      border-radius: 16px
+      margin-top: 12px
+      padding: 14px
+      font-family: 'SBSansDisplay'
+      font-style: normal
+      font-weight: 600
+      @include font-size(18px)
+      @include rfs(26px,'line-height')
+      @include media-breakpoint-down('lg')
+        @include font-size(14px)
+        @include rfs(22px,'line-height')
+        margin-top: 6px
+        padding: 6px
+    .col-6:first-child
+      padding-right: 4px
+    .col-6:last-child
+      padding-left: 4px
+    .col-6
+      > div.speaker-unit
+        @include font-size(16px)
+        @include rfs(26px,'line-height')
+    .table-footer
+      @include margin-top(22px)
+      font-family: 'SBSansText'
+      font-style: normal
+      font-weight: normal
+      @include font-size(16px)
+      @include rfs(20px,'line-height')
+      color: rgba(53,63,71, 0.6)
+      @include media-breakpoint-down('lg')
+        .btn-action3
+          margin-left: 0
+
+
+  .table-item.break
+    border-radius: 32px
+    border: 3px solid #FFFFFF
+    color: #81868D
+    font-family: 'SBSansDisplay'
+    font-style: normal
+    font-weight: 600
+    @include font-size(22px)
+    @include rfs(28px,'line-height')
+    .break-icon
+      margin-bottom: 8px
+      img
+        display: inline-block
+
+  .table-item.empty
+    border-radius: 0
+    border: none
+
+  .table-dots,.table2-dots
+    display: block
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    margin-bottom: 24px
+    @include media-breakpoint-down('md')
+      span
+        font-size: 15px
+
+    button
+      position: relative
+      width: 100%
+      padding-right: 5px
+      padding-left: 5px
+      flex-basis: 0
+      flex-grow: 1
+      max-width: 100%
+      border: 0
+      outline: unset
+      span
+        display: block
+        border-radius: 1000px
+        border: 2px solid rgba(53, 63, 71, 0.2)
+        padding: 10px 10px
+        text-align: center
+    button.active
+      span
+        background-color: #60D58E
+        color: #ffffff
+        border: 2px solid #60D58E
+
+
+.owl-carousel1,.owl-carousel2
+  .owl-item
+    >.col
+      @include media-breakpoint-down('sm')
+        padding: 0

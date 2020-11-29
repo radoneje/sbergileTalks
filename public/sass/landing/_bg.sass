@@ -1,0 +1,104 @@
+.bg1
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 10
+  display: block
+  background-size: contain
+  background-position-x: right
+  background-position-y: top
+  background-repeat: no-repeat
+  @include media-breakpoint-up('xl')
+    @include rfs(436px,'width')
+    @include rfs(349px,'height')
+    background-image: url('/img/bg/bg1.svg')
+
+  @include media-breakpoint-between('md','lg')
+    @include rfs(229px,'width')
+    @include rfs(265px,'height')
+    background-image: url('/img/bg/bg1_tablet.svg')
+  @include media-breakpoint-down('md')
+    @include rfs(115px,'width')
+    @include rfs(229px,'height')
+    background-image: url('/img/bg/bg1_mobile.png')
+    background-size: contain
+    top: unset
+
+
+.bg2
+  position: absolute
+  top: -179px
+  left: 26px
+  z-index: -1
+  display: block
+  background-size: contain
+  width: 100%
+  height: 500px
+  background-position-x: center
+  background-position-y: top
+  background-repeat: no-repeat
+  @include media-breakpoint-up('xl')
+    background-image: url('/img/bg/bg2.svg')
+
+  @include media-breakpoint-between('md','lg')
+    background-image: url('/img/bg/bg2_tablet.svg')
+  @include media-breakpoint-down('md')
+    background-image: url('/img/bg/bg2_mobile.png')
+    background-size: contain
+    top: unset
+
+
+
+.bg3
+  position: absolute
+  right: 0
+  z-index: -1
+  @include rfs(-215px,'bottom')
+  display: block
+  background-size: contain
+  background-position-x: right
+  background-position-y: bottom
+  background-repeat: no-repeat
+  @include media-breakpoint-up('xl')
+    @include rfs(436px,'width')
+    @include rfs(349px,'height')
+    background-image: url('/img/bg/bg3.svg')
+
+  @include media-breakpoint-between('md','lg')
+    @include rfs(229px,'width')
+    @include rfs(265px,'height')
+    background-image: url('/img/bg/bg1_tablet.svg')
+  @include media-breakpoint-down('md')
+    @include rfs(115px,'width')
+    @include rfs(229px,'height')
+    background-image: url('/img/bg/bg1_mobile.png')
+    background-size: contain
+    top: unset
+
+
+
+
+.bg4
+  position: absolute
+  left: 0
+  z-index: -1
+  top: -118px
+  display: block
+  background-size: contain
+  background-position-x: left
+  background-position-y: top
+  background-repeat: no-repeat
+  @include media-breakpoint-up('xl')
+    @include rfs(436px,'width')
+    @include rfs(349px,'height')
+    background-image: url('/img/bg/bg4.svg')
+
+  @include media-breakpoint-between('md','lg')
+    @include rfs(229px,'width')
+    @include rfs(265px,'height')
+    background-image: url('/img/bg/bg4.svg')
+  @include media-breakpoint-down('md')
+    @include rfs(500px,'width')
+    @include rfs(229px,'height')
+    background-image: url('/img/bg/bg4.png')
+    background-size: contain
