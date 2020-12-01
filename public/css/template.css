@@ -1,3 +1,19 @@
+.ie-messsage {
+  display: none; }
+
+.ie_not_support section {
+  display: none; }
+
+.ie_not_support .ie-messsage {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 99999; }
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7,15 +23,6 @@
 *::before,
 *::after {
   box-sizing: border-box; }
-#timetable .table-item.content {
-  background: #FFFFFF;
-  border-radius: 32px;
-  padding: 1.25rem;
-  margin-right: 10px;
-}
-#timetable .table-item.break
-
-
 
 html {
   font-family: sans-serif;
@@ -327,9 +334,9 @@ template {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1480; } }
+    max-width: 1480px; } }
 
 @media (min-width: 1900px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .container-xxxl {
@@ -994,7 +1001,7 @@ template {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .col-xxl {
     flex-basis: 0;
     flex-grow: 1;
@@ -1329,7 +1336,7 @@ template {
     right: 0;
     left: auto; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .dropdown-menu-xxl-left {
     right: auto;
     left: 0; }
@@ -1941,13 +1948,13 @@ template {
     .navbar-expand-xl .navbar-toggler {
       display: none; } }
 
-@media (max-width: 1499.98) {
+@media (max-width: 1499.98px) {
   .navbar-expand-xxl > .container,
   .navbar-expand-xxl > .container-fluid, .navbar-expand-xxl > .container-sm, .navbar-expand-xxl > .container-md, .navbar-expand-xxl > .container-lg, .navbar-expand-xxl > .container-xl, .navbar-expand-xxl > .container-xxl, .navbar-expand-xxl > .container-xxxl {
     padding-right: 0;
     padding-left: 0; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .navbar-expand-xxl {
     flex-flow: row nowrap;
     justify-content: flex-start; }
@@ -2723,7 +2730,7 @@ button.bg-dark:focus {
   .d-xl-inline-flex {
     display: inline-flex !important; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .d-xxl-none {
     display: none !important; }
   .d-xxl-inline {
@@ -3211,7 +3218,7 @@ button.bg-dark:focus {
   .align-self-xl-stretch {
     align-self: stretch !important; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .flex-xxl-row {
     flex-direction: row !important; }
   .flex-xxl-column {
@@ -3392,7 +3399,7 @@ button.bg-dark:focus {
   .float-xl-none {
     float: none !important; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .float-xxl-left {
     float: left !important; }
   .float-xxl-right {
@@ -4895,7 +4902,7 @@ button.bg-dark:focus {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .m-xxl-0 {
     margin: 0 !important; }
   .mt-xxl-0,
@@ -5472,7 +5479,7 @@ button.bg-dark:focus {
   .text-xl-center {
     text-align: center !important; } }
 
-@media (min-width: 1500) {
+@media (min-width: 1500px) {
   .text-xxl-left {
     text-align: left !important; }
   .text-xxl-right {
@@ -5713,7 +5720,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 700;
   font-style: normal; }
 
-.bg1 {
+.bg1333 {
   position: absolute;
   right: 0;
   top: 0;
@@ -5723,60 +5730,64 @@ a.text-dark:hover, a.text-dark:focus {
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat; }
-  @media (min-width: 1200px) {
-    .bg1 {
+  @media (min-width: 1500px) {
+    .bg1333 {
       width: calc(3.85rem + 31.2vw);
       height: calc(3.30625rem + 24.675vw);
       background-image: url("/img/bg/bg1.svg"); } }
-  @media (min-width: 1200px) and (min-width: 1200px) {
-    .bg1 {
+  @media (min-width: 1500px) and (min-width: 1200px) {
+    .bg1333 {
       width: 27.25rem; } }
-  @media (min-width: 1200px) and (min-width: 1200px) {
-    .bg1 {
+  @media (min-width: 1500px) and (min-width: 1200px) {
+    .bg1333 {
       height: 21.8125rem; } }
-  @media (min-width: 768px) and (max-width: 1199.98px) {
-    .bg1 {
+  @media (min-width: 768px) and (max-width: 1899.98px) {
+    .bg1333 {
       width: calc(2.55625rem + 15.675vw);
       height: calc(2.78125rem + 18.375vw);
       background-image: url("/img/bg/bg1_tablet.svg"); } }
-  @media (min-width: 768px) and (max-width: 1199.98px) and (min-width: 1200px) {
-    .bg1 {
+  @media (min-width: 768px) and (max-width: 1899.98px) and (min-width: 1200px) {
+    .bg1333 {
       width: 14.3125rem; } }
-  @media (min-width: 768px) and (max-width: 1199.98px) and (min-width: 1200px) {
-    .bg1 {
+  @media (min-width: 768px) and (max-width: 1899.98px) and (min-width: 1200px) {
+    .bg1333 {
       height: 16.5625rem; } }
   @media (max-width: 991.98px) {
-    .bg1 {
+    .bg1333 {
       width: calc(1.84375rem + 7.125vw);
       height: calc(2.55625rem + 15.675vw);
       background-image: url("/img/bg/bg1_mobile.png");
       background-size: contain;
       top: unset; } }
   @media (max-width: 991.98px) and (min-width: 1200px) {
-    .bg1 {
+    .bg1333 {
       width: 7.1875rem; } }
   @media (max-width: 991.98px) and (min-width: 1200px) {
-    .bg1 {
+    .bg1333 {
       height: 14.3125rem; } }
 
 .bg2 {
   position: absolute;
-  top: -179px;
-  left: 26px;
   z-index: -1;
   display: block;
   background-size: contain;
-  width: 100%;
   height: 500px;
   background-position-x: center;
   background-position-y: top;
-  background-repeat: no-repeat; }
-  @media (min-width: 1200px) {
-    .bg2 {
-      background-image: url("/img/bg/bg2.svg"); } }
+  background-repeat: no-repeat;
+  right: 0px; }
   @media (min-width: 768px) and (max-width: 1199.98px) {
     .bg2 {
-      background-image: url("/img/bg/bg2_tablet.svg"); } }
+      background-image: url("/img/bg/bg2_tablet.svg");
+      top: -107px; } }
+  @media (min-width: 1200px) {
+    .bg2 {
+      background-image: url("/img/bg/bg2.svg");
+      top: -179px; } }
+  @media (min-width: 1500px) {
+    .bg2 {
+      background-image: url("/img/bg/bg2.svg");
+      top: -179px; } }
   @media (max-width: 991.98px) {
     .bg2 {
       background-image: url("/img/bg/bg2_mobile.png");
@@ -6373,6 +6384,29 @@ footer {
 .navbar-toggler {
   padding: 0; }
 
+.registration-area:before {
+  background-size: contain;
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  position: absolute; }
+  @media (min-width: 1500px) {
+    .registration-area:before {
+      top: -203px;
+      right: -295px;
+      width: 436px;
+      height: 396px;
+      background-image: url(/img/bg/bg1.svg); } }
+  @media (min-width: 768px) and (max-width: 1899.98px) {
+    .registration-area:before {
+      top: -123px;
+      right: -99px;
+      width: 229px;
+      height: 265px;
+      background-image: url(/img/bg/bg1_tablet.svg); } }
+
 .registration-area {
   background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 48.84%);
   box-shadow: 0px 4px 24px rgba(53, 63, 71, 0.08);
@@ -6639,11 +6673,13 @@ footer {
     .submit-container {
       right: 15px; } }
 
+.registration-form-area:before {
+  content: ''; }
+
 #about {
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
   #about .bg-container {
-    background: rgba(238, 241, 248, 0.3);
+    background: rgba(238, 241, 248, 0.92);
     backdrop-filter: blur(40px); }
   #about .container {
     padding-top: calc(1.875rem + 7.5vw);
@@ -6799,7 +6835,7 @@ footer {
       font-family: 'SBSansText';
       font-style: normal;
       font-weight: normal;
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: calc(1.275rem + 0.3vw); }
       @media (min-width: 1200px) {
         #speakers .speaker-item .content {
@@ -6822,6 +6858,11 @@ footer {
 
 #slider-navs button {
   border: none; }
+
+#speakerModal {
+  margin: 0 !important; }
+  #speakerModal .modal-content, #speakerModal .modal-dialog {
+    max-height: 100% !important; }
 
 #timetable {
   position: relative; }
@@ -6930,7 +6971,10 @@ footer {
   @media (max-width: 991.98px) and (min-width: 1200px) {
     #timetable .table-item .time {
       line-height: 1.75rem; } }
-
+  #timetable .table-item.content {
+    background: #FFFFFF;
+    border-radius: 32px;
+    padding: 1.25rem; }
     #timetable .table-item.content .table-item-title {
       font-family: 'SBSansDisplay';
       font-style: normal;
@@ -7002,9 +7046,7 @@ footer {
     font-style: normal;
     font-weight: 600;
     font-size: calc(1.2625rem + 0.15vw);
-    line-height: calc(1.3rem + 0.6vw);
-  margin-right: 10px !important;
-  }
+    line-height: calc(1.3rem + 0.6vw); }
     @media (min-width: 1200px) {
       #timetable .table-item.break {
         font-size: 1.375rem; } }
