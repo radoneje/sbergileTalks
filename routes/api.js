@@ -25,10 +25,11 @@ router.post('/addUser', async (req, res, next) => {
 
     try {
       var text = "Здравствуйте! \r\n\r\n\
-Вы зарегистрировались на конференцию Sbergile Talks. Детали по подключению мы направим ближе к дате конференции.\r\n\r\n\
+Вы зарегистрировались на конференцию Sbergile Talks, проходящую 8 и 9 декабря. Трансляция докладов начнется 8 декабря в 10:00. Детали по подключению мы направим ближе к дате конференции.\r\n\r\n\
 Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n";
 
       workshops.forEach(ws=>{
+
         if(user[ws.id]){
           text+="Воркшоп \""+ws.title+"\" будет проходить " + ws.descr + ",  доступ по ссылке: "+ ws.url +"\r\n\r\n"
         }
@@ -41,12 +42,12 @@ router.post('/addUser', async (req, res, next) => {
         content= fs.readFileSync(path.join(__dirname, '../public/event.ics'))
       //else
        // content= fs.readFileSync(path.join(__dirname, '../public/eventSmall.ics'))
-      var calendar={
+      /*var calendar={
         filename: 'invitation.ics',
         method: 'request',
         content: content
-      }
-      await sendEmail(user.e, text, subj, calendar);
+      }*/
+      await sendEmail(user.e, text, subj);
     } catch (e) {
       console.log("error mail", e)
     }
@@ -142,7 +143,7 @@ router.get('/usersXLS', async function(req, res, next) {
   });
 
 });
-async function sendEmail(email, text,subj, calendar) {
+async function sendEmail(email, text,subj) {
   var transporter = nodemailer.createTransport({
   /*  host: "mail.nic.ru",
     port: 465,
@@ -166,10 +167,10 @@ async function sendEmail(email, text,subj, calendar) {
     subject: subj,
     text: text
   };
-  if(calendar) {
+/*  if(calendar) {
     console.log("cale", calendar)
     mailOptions.icalEvent=calendar;
-  }
+  }*/
 
   try {
     await transporter.sendMail(mailOptions)
