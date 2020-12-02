@@ -29,7 +29,7 @@ router.get('/admin', checkAdmin, async function(req, res, next) {
   users.forEach(u=>{
     u.dateReg=moment(u.dateReg).add(3, 'hours').format("DD.MM.yyyy HH:mm:ss")
   })
-  res.render('admin', { title: '**', users:users });
+  res.render('admin', { title: '**', users:users, ws:require('../workshops')});
 });
 
 module.exports = router;

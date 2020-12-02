@@ -110,12 +110,15 @@ router.get('/usersXLS', async function(req, res, next) {
     },
   });
   var qColumns=["id", "Имя","Фамилия", "email","компания", " дата регистрации", "должность"]
-  var ws = wb.addWorksheet('гыукы',
+  var wrs=require('../workshops');
+  wrs.forEach(workshop=>{
+    qColumns.push(workshop.title)
+  })
+  var ws = wb.addWorksheet('registration',
   );
   for(var i=1; i<=qColumns.length;i++){
     ws.cell(1, i).string(qColumns[i-1]).style(headStyle);
     ws.column(i).setWidth(30);
-
   }
   var j=1;
   var users=await req.knex.select("*").from("t_users");
@@ -124,7 +127,7 @@ router.get('/usersXLS', async function(req, res, next) {
     q.dateReg=moment(q.dateReg).format("DD.MM.yyyy hh:mm:ss")
     j++;
     var keys=Object.keys(q)
-    for(var i=1; i<=qColumns.length;i++){
+    for(var i=1; i<=7/*qColumns.length*/;i++){
       var val=q[keys[i-1]]
       if(val) {
         val=val.toString();
@@ -133,6 +136,27 @@ router.get('/usersXLS', async function(req, res, next) {
         else
           console.log('not string', val)
       }
+    }
+    //console.log("ws", wrs);
+
+    for(var i=0;i<wrs.length;i++){
+      //console.log(i);
+      console.log(i, wrs[i].id, q[wrs[i].id]?"ДА":'');
+      ws.cell(j, i+7).string(q[wrs[i].id]?"ДА":'').style(style);
+     /* var val="";
+      var ii=0;
+      wrs.forEach(workshop=>{
+        if(ii==(i)) {
+
+          val=q[workshop.id]?"ДА":'';
+          ii=ii+1;
+          console.log("workshop", val, i, ii, wrs.length);
+        }
+      })
+      //console.log("wsid", wsid);
+     // var val=q[wsid]?"ДА":'';
+
+      ws.cell(j, i+7).string(val).style(style);*/
     }
   })
 

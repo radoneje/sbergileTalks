@@ -19,6 +19,8 @@ block content
           th(scope="col") Компания
           th(scope="col") Должность
           th(scope="col") Дата регистрации
+          each workshop in ws
+            th #{workshop.title}
       tbody
         each user in users
           tr
@@ -29,6 +31,9 @@ block content
             td #{user.c}
             td #{user.position}
             td #{user.dateReg}
+            each workshop in ws
+              th #{user[workshop.id]?"да":''}
+
 
   script.
     function usersXLS() {
