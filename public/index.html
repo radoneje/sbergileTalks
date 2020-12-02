@@ -2406,9 +2406,12 @@
             $('.registration-form input[type="text"]').change(function (){
                 validateForm();
             });
-
+            var isReg=false
             $('.submit-form').on('click',function (){
                 //$('form').submit();
+                if(isReg)
+                    return;
+                isReg=true;
                 if ( validateForm() === true ) {
                     $('#spinner-area').removeClass('d-none');
                     var $elems=$(".registration-form input")
@@ -2435,7 +2438,7 @@
                             //  $(".registration-form input").each(function(i,e){$(e).prop("readonly", true)});
                             $('#spinner-area').addClass('d-none');
                             $('#resultModal').modal('show');
-                            isSend=true;
+                            isReg=true;
                         }
                     });
                 }
