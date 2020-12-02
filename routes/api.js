@@ -182,7 +182,7 @@ router.get('/usersXLS', async function(req, res, next) {
     for(var i=0;i<wrs.length;i++){
       //console.log(i);
       console.log(i, wrs[i].id, q[wrs[i].id]?"ДА":'');
-      ws.cell(j, i+7).string(q[wrs[i].id]?"ДА":'').style(style);
+      ws.cell(j, i+8).string(q[wrs[i].id]?"1":'').style(style);
      /* var val="";
       var ii=0;
       wrs.forEach(workshop=>{
