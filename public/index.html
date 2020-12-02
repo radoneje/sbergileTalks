@@ -2418,7 +2418,7 @@
                     console.log($elems);
                     var obj = new Object();
                     $elems.each(function(i,e){
-                        var val=$(e).attr("type")=='checkbox'? $(e).is(":checked"): $(e).val()
+                        var val=$(e).attr("type")=='checkbox'? $(e).is(":checked"): $(e).val().replace("&", '')
                         obj[$(e).attr("formid")] =val ;
                     })
                     $("#workshop-form input").each(function(i,e){
