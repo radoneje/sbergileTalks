@@ -21,6 +21,7 @@ block content
           th(scope="col") Дата регистрации
           each workshop in ws
             th #{workshop.title}
+          th
       tbody
         each user in users
           tr
@@ -33,9 +34,19 @@ block content
             td #{user.dateReg}
             each workshop in ws
               th #{user[workshop.id]?"да":''}
+            td
+              input.btn.btn-sm(type="button" value="Отправить приглашение повторно" onClick="sendSecond('" + user.id + "')")
 
 
   script.
+    async function  sendSecond(userid){
+      console.log("sendSecond", userid)
+      var res=await axios.post("/rest/api/resend",{userid});
+      if(res.data==0)
+        alert("отправлено")
+      else
+        alert("ошибка")
+    }
     function usersXLS() {
       var elem=document.createElement("iframe")
       elem.src="/rest/api/usersXLS"

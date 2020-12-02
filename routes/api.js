@@ -56,6 +56,46 @@ router.post('/addUser', async (req, res, next) => {
   res.json(1)
 });
 
+
+router.post('/resend', async (req, res, next) =>{
+  try {
+  var r = await req.knex("t_users").select( "*").where({id:req.body.userid})
+  if(r.length>0) {
+    var user = r[0];
+
+    var text = "Здравствуйте! \r\n\r\n\
+Вы зарегистрировались на конференцию Sbergile Talks, проходящую 8 и 9 декабря. Трансляция докладов начнется 8 декабря в 10:00. Детали по подключению мы направим ближе к дате конференции.\r\n\r\n\
+Вступайте в чат конференции в telegram, там будут самые оперативные новости и классный нетворкинг: https://t.me/sbergiletalks  \r\n\r\n";
+
+    workshops.forEach(ws => {
+
+      if (user[ws.id]) {
+        text += "Воркшоп \"" + ws.title + "\" будет проходить " + ws.descr + ",  доступ по ссылке: " + ws.url + "\r\n\r\n"
+      }
+    })
+    text += "До встречи 8-9 декабря на Sbergile Talks!";
+    var subj = "Регистрация на конференцию Sbergile Talks"
+
+    var content = "";
+    // if(user.workshops)
+    content = fs.readFileSync(path.join(__dirname, '../public/event.ics'))
+    //else
+    // content= fs.readFileSync(path.join(__dirname, '../public/eventSmall.ics'))
+    /*var calendar={
+      filename: 'invitation.ics',
+      method: 'request',
+      content: content
+    }*/
+    await sendEmail(user.e, text, subj);
+    res.json(0)
+  }
+    } catch (e) {
+      console.log("error mail", e)
+    res.json(1)
+    }
+
+
+});
 router.post('/user', async (req, res, next) =>{
 try {
 /*  var google = await axios.get("https://www.google.com/recaptcha/api/siteverify?secret=6Ldk8uIZAAAAAAQGcBwNuu66uC8wFhxAZ1AJ-U0b&response=" + req.body.token)
