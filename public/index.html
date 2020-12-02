@@ -349,7 +349,7 @@
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <!--input type="checkbox" formid="workshops" name="workshops" id="checkbox-workshops"  value="yes" class="sber-checkbox"-->
+                                    <input type="checkbox" formid="workshops" name="workshops" id="checkbox-workshops"  value="yes" class="sber-checkbox"/>
                                     <label for="checkbox-workshops">Воркшопы. Регистрация завершена.</label>
                                 </div>
                             </div>
@@ -2313,6 +2313,7 @@
             })
 
             $('#checkbox-workshops').on('click', function (event) {
+                return false;
                 let screen = screenSize;
                 let parent = $('.registration-area');
                 let showElement = $('#workshop-form');
