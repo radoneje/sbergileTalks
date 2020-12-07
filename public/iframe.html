@@ -2368,7 +2368,10 @@
         //recalcTimetable ();
     };
     function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        console.log("w", obj.offsetWidth)
+        var hei=(((obj.offsetWidth/16)*9)+40)+670;;
+        console.log("h",hei +"px")
+        obj.style.height = hei+"px"
     }
 
 </script>
