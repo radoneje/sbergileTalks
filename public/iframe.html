@@ -2366,6 +2366,10 @@
             var hei=((($elem[0].offsetWidth/16)*9)+40)+660;;
             $elem[0].style.height = hei+"px"
         }
+        else if(window.innerWidth>=1500){
+            var hei=((($elem[0].offsetWidth/16)*9))*0.5;
+            $elem[0].style.height = hei+"px"
+        }
         else{
             $elem[0].style.height =null;
         }
