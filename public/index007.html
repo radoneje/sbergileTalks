@@ -460,7 +460,7 @@
 
 
                     <a href="#" class="speaker-item"  data-toggle="modal" data-target="#speakerModal" data-id="6">
-                        <img src="/img/avatars/speaker_50.jpg" class="img-response" />
+                        <img src="/img/avatars/speaker_6.jpg" class="img-response" />
                         <div class="content sameHeight text-wrap">
                             <h4 class="title text-wrap">Дудоров Александр</h4>
                             <div class="text-wrap">Член российской Ассоциации фасилитаторов</div>
@@ -2535,7 +2535,7 @@
         if (screenSize > 1400) $('.bg2').css('right',$('.registration-area').width());
 
 
-        calculateMaxHeight('.speaker-item',30);
+        calculateMaxHeight('.speaker-item .content',30);
 
         recalcNavbar ();
         recalcTimetable ();
@@ -2582,7 +2582,6 @@
             }
         });
         //$(selector).height(highestBox + addPadding);
-        console.log(highestBox);
         $(selector).css('min-height',(highestBox + addPadding));
     }
 
@@ -2590,7 +2589,7 @@
     window.onresize = function(event) {
         recalcNavbar ();
         recalcButton();
-        calculateMaxHeight('.speaker-item',0);
+        calculateMaxHeight('.speaker-item  .content',0);
         //recalcTimetable ();
     };
 
