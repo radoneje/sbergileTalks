@@ -1,6 +1,10 @@
 .ie-messsage {
   display: none; }
-
+.playerIframe{
+  width: 100%;
+  border: none;
+  overflow: hidden;
+}
 .ie_not_support section {
   display: none; }
 
