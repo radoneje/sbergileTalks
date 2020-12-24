@@ -18,6 +18,60 @@
   background-color: #ffffff;
   z-index: 99999; }
 
+body.noScroll{
+  overflow: hidden;
+}
+.fullScreenDiv{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.75);
+  z-index: 1000;
+}
+.fullScreenWr{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fullScreenBox{
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fullScreenHeader{
+  text-align: right;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 4px solid #e6eaf5;
+}
+.fullScreenHeader span{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 24px;
+
+
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
